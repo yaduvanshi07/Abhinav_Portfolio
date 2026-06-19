@@ -20,9 +20,6 @@ export default {
       screens: {
         xs: "450px",
       },
-      backgroundImage: {
-        "hero-pattern": "url('/herobg.png')",
-      },
     },
   },
   plugins: [],
