@@ -1,0 +1,6 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="300" fill="#bf61ff" opacity="0.1"/>
+<rect x="50" y="100" width="300" height="150" rx="10" fill="#bf61ff" opacity="0.3"/>
+<text x="200" y="180" font-family="Arial" font-size="24" fill="#bf61ff" text-anchor="middle">Project Image</text>
+</svg>
+
