@@ -3,7 +3,7 @@
 Welcome to the repository of my personal portfolio. This is a highly interactive, responsive, and visually stunning 3D developer portfolio showcasing my skills, experiences, projects, and academic background.
 
 Live Site: [Wanderlust Loop (Featured Project)](https://wanderlust-loop.onrender.com/listings)  
-Resume Link: [Google Drive](https://drive.google.com/file/d/1f_2nYCdCHQpr_icf5XSjdMhMIFt8snbq/view?usp=sharing)
+Resume Link: [Google Drive](https://drive.google.com/file/d/1l-0d64IU9MXXonUHYGVHhXbzFkHDKbmH/view?usp=sharing)
 
 ---
 
