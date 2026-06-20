@@ -40,18 +40,11 @@ const getServiceIcon = (title) => {
   }
 }
 
-const ServiceCard = ({ index, title }) => (
-  <Tilt
-    className="xs:w-[250px] w-full"
-    options={{
-      max: 25,
-      scale: 1.05,
-      speed: 400,
-    }}
-  >
+const ServiceCard = ({ index, title, link }) => {
+  const cardContent = (
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.3, 0.75)}
-      className="w-full bg-gradient-to-br from-[#00cea8]/30 to-[#bf61ff]/30 p-[1px] rounded-[20px] shadow-card hover:shadow-[0_0_25px_rgba(145,94,255,0.3)] transition-shadow duration-300"
+      className={`w-full bg-gradient-to-br from-[#00cea8]/30 to-[#bf61ff]/30 p-[1px] rounded-[20px] shadow-card hover:shadow-[0_0_25px_rgba(145,94,255,0.3)] transition-shadow duration-300 ${link ? 'cursor-pointer' : ''}`}
     >
       <div className="bg-[#151030]/80 backdrop-blur-md rounded-[20px] py-8 px-6 min-h-[280px] flex justify-evenly items-center flex-col border border-white/5">
         <div className="flex items-center justify-center bg-white/5 p-4 rounded-full border border-white/10 shadow-inner">
@@ -61,10 +54,38 @@ const ServiceCard = ({ index, title }) => (
         <h3 className="text-white text-[19px] font-bold text-center mt-4 tracking-wide">
           {title}
         </h3>
+
+        {link && (
+          <span className="text-[12px] font-semibold text-[#00cea8] mt-4 flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity duration-200">
+            View Certificate
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </span>
+        )}
       </div>
     </motion.div>
-  </Tilt>
-)
+  );
+
+  return (
+    <Tilt
+      className="xs:w-[250px] w-full"
+      options={{
+        max: 25,
+        scale: 1.05,
+        speed: 400,
+      }}
+    >
+      {link ? (
+        <a href={link} target="_blank" rel="noopener noreferrer" className="block w-full">
+          {cardContent}
+        </a>
+      ) : (
+        cardContent
+      )}
+    </Tilt>
+  );
+}
 
 const About = () => {
   return (

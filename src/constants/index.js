@@ -46,10 +46,12 @@ const services = [
   {
     title: "Full Stack Developer",
     icon: web,
+    link: "https://drive.google.com/file/d/1sIEZiwRniWOGZtiy5-qDpwaZYmlC5Flg/view?usp=sharing",
   },
   {
     title: "Backend Engineer",
     icon: backend,
+    link: "https://drive.google.com/file/d/1sIEZiwRniWOGZtiy5-qDpwaZYmlC5Flg/view?usp=sharing",
   },
   {
     title: "AI/ML Integrations",
@@ -58,6 +60,7 @@ const services = [
   {
     title: "Software Engineer",
     icon: mobile,
+    link: "https://drive.google.com/file/d/1QIpyvnUqjXxK4E2PEJWD8HWWUeVnD2KA/view?usp=sharing",
   },
 ];
 
@@ -168,7 +171,8 @@ const experiences = [
       "Built and deployed interactive telemetry visualization modules for real-time diagnostic reporting.",
       "Refactored legacy application codebase into a clean, scalable, modular architecture aligned with solid backend design practices.",
       "Recognized with the prestigious Best Intern Award for delivering exceptional engineering contributions."
-    ]
+    ],
+    link: "https://drive.google.com/file/d/1QIpyvnUqjXxK4E2PEJWD8HWWUeVnD2KA/view?usp=sharing"
   },
   {
     title: "Research Intern (AI/ML)",
@@ -182,7 +186,8 @@ const experiences = [
       "Boosted experimental reproducibility by 50% through simulated environment tracking and parameter serialization.",
       "Improved reinforcement learning algorithm convergence speeds by 30% via reward-shaping functions and learning-rate tuning.",
       "Engineered an intelligent recommendation system displaying highly tailored agent-driven content recommendation."
-    ]
+    ],
+    link: "https://drive.google.com/file/d/135JdUhYzsYqqGz72WE2S_ig9HFBgR0uA/view?usp=sharing"
   }
 ];
 
@@ -345,7 +350,7 @@ export const certifications = [
     skills: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Authentication"],
     icon: "💻",
     color: "#00cea8",
-    pdf: "/Full Stack Development.pdf"
+    pdf: "https://drive.google.com/file/d/1sIEZiwRniWOGZtiy5-qDpwaZYmlC5Flg/view?usp=sharing"
   },
   {
     title: "C++ and Data Structures & Algorithms",
@@ -365,7 +370,7 @@ export const certifications = [
     skills: ["Manual Testing", "Test Case Design", "Defect Tracking", "Regression Testing", "QA Workflows"],
     icon: "🧪",
     color: "#bf61ff",
-    pdf: "/Software Testing.pdf"
+    pdf: "https://drive.google.com/file/d/1VFBaI08j5D7jCTbq0FGFuk17px94ZJ87/view?usp=sharing"
   },
   {
     title: "Industrial Internet of Things (IIoT) 4.0",
@@ -375,7 +380,7 @@ export const certifications = [
     skills: ["IoT Architecture", "Smart Manufacturing", "Edge Computing", "MQTT", "Sensor Networks"],
     icon: "🏭",
     color: "#00cea8",
-    pdf: "/1022_Introduction to Industry 4.0 and Industrial Internet of Things.pdf"
+    pdf: "https://drive.google.com/file/d/1tVA-1SEKtTAAoY67vrYRftIZ1MMZ7gon/view?usp=sharing"
   },
   {
     title: "Human Computer Interaction & Interface Design",
@@ -385,6 +390,6 @@ export const certifications = [
     skills: ["UI/UX Design", "Usability Engineering", "Prototyping", "Accessibility", "Cognitive Design"],
     icon: "🖥️",
     color: "#915eff",
-    pdf: "/1022_Design & Implementation of Human-Computer Interfaces.pdf"
+    pdf: "https://drive.google.com/file/d/1mjJKBL8wKdfcrHoafImY_cw42UrHfEDA/view?usp=sharing"
   }
 ];

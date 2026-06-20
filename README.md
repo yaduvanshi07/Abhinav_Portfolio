@@ -37,48 +37,7 @@ This portfolio is designed to deliver a premium, immersive user experience lever
 
 ---
 
-## 📂 Project Directory Structure
 
-```
-Portf/
-├── public/                  # Static assets (PDF certificates, intro video, images)
-│   ├── intro.mp4            # Local introduction video file
-│   └── *.pdf                # Publicly viewable certificates
-├── src/
-│   ├── assets/              # Locally imported image & vector assets (logos, project screenshots)
-│   ├── components/          # Reusable React components
-│   │   ├── canvas/          # 3D Canvas components (e.g., StarsCanvas.jsx)
-│   │   ├── About.jsx        # Professional Story and Core Stats
-│   │   ├── Achievements.jsx # Key milestones andDSA counts
-│   │   ├── Certifications.jsx # Interactive credentials hub
-│   │   ├── Contact.jsx      # Interactive Email Form
-│   │   ├── Education.jsx    # School & College milestones
-│   │   ├── ErrorBoundary.jsx# Fallback handler for React components
-│   │   ├── Footer.jsx       # Bottom layout links
-│   │   ├── Hero.jsx         # Introduction section + intro video panel
-│   │   ├── Loader.jsx       # 3D canvas loading screen
-│   │   ├── Navbar.jsx       # Sticky responsive glassmorphic nav bar
-│   │   ├── Projects.jsx     # Project showcase cards
-│   │   ├── Tech.jsx         # Skills overview lists
-│   │   └── Works.jsx        # Work experience timeline
-│   ├── constants/
-│   │   └── index.js         # Single Source of Truth for experiences, skills, and links data
-│   ├── hoc/
-│   │   └── SectionWrapper.jsx # Higher Order Component wrapping section transitions and animations
-│   ├── utils/
-│   │   └── motion.js        # Framer Motion animation utility configs (fadeIn, textVariant, etc.)
-│   ├── App.jsx              # Main application orchestrator
-│   ├── index.css            # Global CSS styling & animation triggers
-│   ├── main.jsx             # React DOM rendering entrypoint
-│   └── styles.js            # Extensible styling constants
-├── .env                     # Local environment variables configuration
-├── index.html               # Main HTML entrypoint (SEO optimized)
-├── package.json             # Scripts & dependency definitions
-├── tailwind.config.js       # Tailwind CSS design token setup
-└── vite.config.js           # Rollup and dev server ports mapping
-```
-
----
 
 ## ⚙️ Setup & Installation Instructions
 
@@ -126,6 +85,4 @@ npm run preview
 ## 📬 Contact & Networks
 
 *   **Email**: [abhinavyaduvanshi05@gmail.com](mailto:abhinavyaduvanshi05@gmail.com)
-*   **Phone**: +91-9336158912
-*   **LinkedIn**: [abhinav-kumar-yadav-706a14257](https://www.linkedin.com/in/abhinav-kumar-yadav-706a14257)
-*   **GitHub**: [yaduvanshi07](https://github.com/yaduvanshi07)
+*  
