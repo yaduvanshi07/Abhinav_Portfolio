@@ -349,7 +349,7 @@ export const certifications = [
     description: "Comprehensive training covering end-to-end web application development — from responsive frontend design with React.js to scalable backend architecture with Node.js, Express.js, and MongoDB. Includes hands-on projects deploying RESTful APIs, authentication systems, and cloud-hosted full-stack applications.",
     skills: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Authentication"],
     icon: "💻",
-    color: "#00cea8",
+    color: "#3B82F6",
     pdf: "https://drive.google.com/file/d/1sIEZiwRniWOGZtiy5-qDpwaZYmlC5Flg/view?usp=sharing"
   },
   {
@@ -359,7 +359,7 @@ export const certifications = [
     description: "Intensive certification in advanced C++ programming and algorithmic problem-solving. Covers memory management, STL mastery, graph algorithms, dynamic programming, greedy strategies, and systems-level design patterns — validated by solving 400+ competitive programming challenges.",
     skills: ["C++", "STL", "Dynamic Programming", "Graph Algorithms", "Greedy", "Recursion"],
     icon: "🧠",
-    color: "#915eff",
+    color: "#60A5FA",
     pdf: "/C++ and DSA.pdf"
   },
   {
@@ -369,7 +369,7 @@ export const certifications = [
     description: "End-to-end software quality assurance training covering manual testing methodologies, test case design, defect lifecycle management, regression testing strategies, and an introduction to automation testing frameworks. Emphasizes real-world QA workflows and industry-standard testing tools.",
     skills: ["Manual Testing", "Test Case Design", "Defect Tracking", "Regression Testing", "QA Workflows"],
     icon: "🧪",
-    color: "#bf61ff",
+    color: "#3B82F6",
     pdf: "https://drive.google.com/file/d/1VFBaI08j5D7jCTbq0FGFuk17px94ZJ87/view?usp=sharing"
   },
   {
@@ -379,7 +379,7 @@ export const certifications = [
     description: "In-depth exploration of Industry 4.0 concepts including Industrial IoT architectures, smart manufacturing, sensor networks, edge computing, cyber-physical systems, and real-time data analytics for industrial automation. Covers protocols like MQTT, CoAP, and industrial communication standards.",
     skills: ["IoT Architecture", "Smart Manufacturing", "Edge Computing", "MQTT", "Sensor Networks"],
     icon: "🏭",
-    color: "#00cea8",
+    color: "#60A5FA",
     pdf: "https://drive.google.com/file/d/1tVA-1SEKtTAAoY67vrYRftIZ1MMZ7gon/view?usp=sharing"
   },
   {
@@ -389,7 +389,7 @@ export const certifications = [
     description: "Comprehensive study of HCI principles including user-centered design, interaction paradigms, usability engineering, accessibility standards, cognitive psychology in UI/UX, wireframing, prototyping, and heuristic evaluation methods. Bridges the gap between human cognition and computational interfaces.",
     skills: ["UI/UX Design", "Usability Engineering", "Prototyping", "Accessibility", "Cognitive Design"],
     icon: "🖥️",
-    color: "#915eff",
+    color: "#3B82F6",
     pdf: "https://drive.google.com/file/d/1mjJKBL8wKdfcrHoafImY_cw42UrHfEDA/view?usp=sharing"
   }
 ];

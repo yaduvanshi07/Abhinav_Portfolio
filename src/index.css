@@ -16,8 +16,8 @@ html {
 body {
   width: 100%;
   overflow-x: hidden;
-  background: #050816;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  background: #09090B;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,64 +29,139 @@ canvas {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'JetBrains Mono', 'Fira Code', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+/* ========================================
+   Custom Scrollbar
+   ======================================== */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3B82F6, #60A5FA);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #60A5FA, #93C5FD);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3B82F6 #09090B;
+}
+
+/* ========================================
+   Text Selection
+   ======================================== */
+::selection {
+  background: rgba(59, 130, 246, 0.25);
+  color: #F8FAFC;
+}
+
+::-moz-selection {
+  background: rgba(59, 130, 246, 0.25);
+  color: #F8FAFC;
+}
+
+/* ========================================
+   Focus Visible (Accessibility)
+   ======================================== */
+*:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ========================================
+   Gradients
+   ======================================== */
 .black-gradient {
-  background: linear-gradient(90deg, #000000 0%, #434343 100%);
+  background: linear-gradient(90deg, #09090B 0%, #18181B 100%);
 }
 
 .violet-gradient {
-  background: linear-gradient(90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.5) 0%, rgba(59, 130, 246, 0) 100%);
   background: -webkit-linear-gradient(
-    90deg,
-    #804dee 0%,
-    rgba(60, 51, 80, 0) 100%
+    180deg,
+    rgba(59, 130, 246, 0.5) 0%,
+    rgba(59, 130, 246, 0) 100%
   );
 }
 
 .green-pink-gradient {
-  background: linear-gradient(90deg, #00cea8 0%, #bf61ff 100%);
-  background: -webkit-linear-gradient(90deg, #00cea8 0%, #bf61ff 100%);
+  background: linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%);
+  background: -webkit-linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%);
 }
 
 .orange-text-gradient {
-  background: #f12711;
-  background: -webkit-linear-gradient(to top, #f12711, #f5af19);
-  background: linear-gradient(to top, #f12711, #f5af19);
+  background: #3B82F6;
+  background: -webkit-linear-gradient(to top, #3B82F6, #60A5FA);
+  background: linear-gradient(to top, #3B82F6, #60A5FA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .green-text-gradient {
-  background: #11998e;
-  background: -webkit-linear-gradient(to top, #11998e, #38ef7d);
-  background: linear-gradient(to top, #11998e, #38ef7d);
+  background: #22C55E;
+  background: -webkit-linear-gradient(to top, #16A34A, #22C55E);
+  background: linear-gradient(to top, #16A34A, #22C55E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .blue-text-gradient {
-  background: #56ccf2;
-  background: -webkit-linear-gradient(to top, #56ccf2, #2f80ed);
-  background: linear-gradient(to top, #56ccf2, #2f80ed);
+  background: #3B82F6;
+  background: -webkit-linear-gradient(to top, #2563EB, #60A5FA);
+  background: linear-gradient(to top, #2563EB, #60A5FA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .pink-text-gradient {
-  background: #ec008c;
-  background: -webkit-linear-gradient(to top, #ec008c, #fc6767);
-  background: linear-gradient(to top, #ec008c, #fc6767);
+  background: #60A5FA;
+  background: -webkit-linear-gradient(to top, #3B82F6, #93C5FD);
+  background: linear-gradient(to top, #3B82F6, #93C5FD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* ========================================
+   Section Divider
+   ======================================== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59,130,246,0.2), rgba(96,165,250,0.2), transparent);
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+/* ========================================
+   Blink animation (for typewriter cursor)
+   ======================================== */
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #3B82F6; }
+}
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ========================================
+   Loader
+   ======================================== */
 .loader {
   color: #ffffff;
   font-size: 20px;
@@ -175,4 +250,3 @@ code {
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
-

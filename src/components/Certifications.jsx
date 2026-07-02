@@ -5,6 +5,24 @@ import { certifications } from '../constants'
 import { textVariant, fadeIn, staggerContainer } from '../utils/motion'
 import SectionWrapper from '../hoc/SectionWrapper'
 import { Tilt } from 'react-tilt'
+import { FaLaptopCode, FaBrain, FaFlask, FaIndustry, FaDesktop, FaExternalLinkAlt } from 'react-icons/fa'
+
+const getCertIcon = (icon) => {
+  switch (icon) {
+    case "💻":
+      return <FaLaptopCode className="w-7 h-7" />
+    case "🧠":
+      return <FaBrain className="w-7 h-7" />
+    case "🧪":
+      return <FaFlask className="w-7 h-7" />
+    case "🏭":
+      return <FaIndustry className="w-7 h-7" />
+    case "🖥️":
+      return <FaDesktop className="w-7 h-7" />
+    default:
+      return <FaLaptopCode className="w-7 h-7" />
+  }
+}
 
 const CertificationCard = ({ index, title, issuer, date, description, skills, icon, color, pdf }) => {
   const [isHovered, setIsHovered] = useState(false)
@@ -30,7 +48,7 @@ const CertificationCard = ({ index, title, issuer, date, description, skills, ic
           style={{ background: `linear-gradient(135deg, ${color}40, transparent, ${color}20)` }}
         />
 
-        <div className="relative bg-[#151030]/70 backdrop-blur-md border border-white/5 rounded-2xl overflow-hidden group-hover:border-white/10 transition-all duration-500">
+        <div className="relative bg-[#18181B]/70 backdrop-blur-md border border-white/5 rounded-2xl overflow-hidden group-hover:border-white/10 transition-all duration-500">
           {/* Top accent bar */}
           <div
             className="h-1 w-full"
@@ -41,17 +59,18 @@ const CertificationCard = ({ index, title, issuer, date, description, skills, ic
             {/* Header */}
             <div className="flex items-start gap-4">
               <div
-                className="w-14 h-14 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 border shadow-lg transition-transform duration-300 group-hover:scale-110"
+                className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 border shadow-lg transition-transform duration-300 group-hover:scale-110"
                 style={{
                   backgroundColor: `${color}10`,
                   borderColor: `${color}30`,
+                  color: color,
                   boxShadow: isHovered ? `0 0 20px ${color}20` : 'none'
                 }}
               >
-                {icon}
+                {getCertIcon(icon)}
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="text-white text-[17px] font-bold tracking-wide leading-tight">{title}</h3>
+                <h3 className="text-white text-[17px] font-bold tracking-wide leading-tight font-heading">{title}</h3>
                 <p className="text-secondary text-[13px] font-medium mt-1">{issuer}</p>
                 <span
                   className="inline-block text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full mt-2"
@@ -67,7 +86,7 @@ const CertificationCard = ({ index, title, issuer, date, description, skills, ic
             </div>
 
             {/* Description */}
-            <p className="text-[#aaa6c3] text-[13px] leading-[22px] font-light">
+            <p className="text-secondary text-[13px] leading-[22px] font-light">
               {description}
             </p>
 
@@ -88,7 +107,7 @@ const CertificationCard = ({ index, title, issuer, date, description, skills, ic
               href={pdf}
               target="_blank"
               rel="noopener noreferrer"
-              className="group/btn flex items-center justify-center gap-2 w-full py-3 rounded-xl text-[13px] font-semibold tracking-wide uppercase transition-all duration-300 border"
+              className="group/btn flex items-center justify-center gap-2 w-full py-3 rounded-xl text-[13px] font-semibold tracking-wide uppercase transition-all duration-300 border font-heading"
               style={{
                 backgroundColor: `${color}10`,
                 borderColor: `${color}20`,
@@ -105,13 +124,8 @@ const CertificationCard = ({ index, title, issuer, date, description, skills, ic
                 e.currentTarget.style.boxShadow = 'none'
               }}
             >
-              <svg className="w-4 h-4 transition-transform duration-300 group-hover/btn:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-              </svg>
+              <FaExternalLinkAlt className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:scale-110" />
               View Certificate
-              <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
             </a>
           </div>
         </div>

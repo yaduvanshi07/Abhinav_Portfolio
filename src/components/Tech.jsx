@@ -3,6 +3,51 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { styles } from '../styles'
 import { skillCategories } from '../constants'
 import { textVariant, fadeIn } from '../utils/motion'
+import { FaLaptopCode, FaBrain, FaChartLine, FaCommentAlt, FaCloud, FaCube, FaDatabase, FaCogs, FaNetworkWired, FaBullseye } from 'react-icons/fa'
+
+const getSkillIcon = (icon, name) => {
+  if (icon.startsWith('http')) {
+    return (
+      <img
+        src={icon}
+        alt={name}
+        className="w-full h-full object-contain"
+        onError={(e) => {
+          e.target.style.display = 'none'
+          const parent = e.target.parentElement
+          if (parent) {
+            parent.innerHTML = '⚙️'
+          }
+        }}
+      />
+    )
+  }
+
+  switch (name) {
+    case "Recommendation Systems":
+      return <FaBullseye className="w-5 h-5 text-accent-rose" />
+    case "Thompson Sampling":
+      return <FaBrain className="w-5 h-5 text-accent-purple" />
+    case "UCB Bandit Algorithms":
+      return <FaChartLine className="w-5 h-5 text-accent-amber" />
+    case "NLP":
+      return <FaCommentAlt className="w-5 h-5 text-[#38ef7d]" />
+    case "Cloudinary":
+      return <FaCloud className="w-5 h-5 text-[#56ccf2]" />
+    case "Data Structures & Algorithms":
+      return <FaLaptopCode className="w-5 h-5 text-accent-cyan" />
+    case "Object Oriented Programming":
+      return <FaCube className="w-5 h-5 text-accent-purple" />
+    case "DBMS":
+      return <FaDatabase className="w-5 h-5 text-accent-teal" />
+    case "Operating Systems":
+      return <FaCogs className="w-5 h-5 text-accent-rose" />
+    case "Computer Networks":
+      return <FaNetworkWired className="w-5 h-5 text-accent-emerald" />
+    default:
+      return <span className="text-lg">{icon}</span>
+  }
+}
 
 const Tech = () => {
   const [activeTab, setActiveTab] = useState(0)
@@ -20,11 +65,10 @@ const Tech = () => {
           <button
             key={category.title}
             onClick={() => setActiveTab(idx)}
-            className={`px-5 py-2.5 rounded-full text-[14px] font-semibold transition-all duration-300 backdrop-blur-md border ${
-              activeTab === idx
-                ? 'bg-gradient-to-r from-[#915eff] to-[#bf61ff] text-white border-transparent shadow-[0_0_15px_rgba(145,94,255,0.4)] scale-105'
+            className={`px-5 py-2.5 rounded-full text-[14px] font-semibold transition-all duration-300 backdrop-blur-md border cursor-pointer font-heading ${activeTab === idx
+                ? 'bg-[#3B82F6] text-white border-transparent shadow-[0_0_15px_rgba(59,130,246,0.3)] scale-105'
                 : 'bg-white/5 text-secondary border-white/10 hover:bg-white/10 hover:text-white'
-            }`}
+              }`}
           >
             {category.title}
           </button>
@@ -48,31 +92,18 @@ const Tech = () => {
                 variants={fadeIn('up', 'spring', index * 0.1, 0.5)}
                 initial="hidden"
                 animate="show"
-                className="bg-[#151030]/50 border border-white/5 p-5 rounded-2xl flex flex-col justify-between backdrop-blur-sm shadow-card hover:border-[#915eff]/30 transition-colors duration-300"
+                className="bg-[#18181B]/50 border border-white/5 p-5 rounded-2xl flex flex-col justify-between backdrop-blur-sm shadow-card hover:border-[#3B82F6]/30 transition-colors duration-300"
               >
                 <div className="flex justify-between items-center mb-4">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-tertiary flex items-center justify-center p-2 border border-white/5">
-                      {skill.icon.startsWith('http') ? (
-                        <img
-                          src={skill.icon}
-                          alt={skill.name}
-                          className="w-full h-full object-contain"
-                          onError={(e) => {
-                            e.target.style.display = 'none'
-                            const parent = e.target.parentElement
-                            if (parent) parent.innerHTML = '⚙️'
-                          }}
-                        />
-                      ) : (
-                        <span className="text-xl">{skill.icon}</span>
-                      )}
+                      {getSkillIcon(skill.icon, skill.name)}
                     </div>
-                    <h4 className="text-white font-bold text-[18px] tracking-wide">
+                    <h4 className="text-white font-bold text-[18px] tracking-wide font-heading">
                       {skill.name}
                     </h4>
                   </div>
-                  <span className="text-[#bf61ff] font-bold text-sm tracking-wider bg-[#bf61ff]/10 px-2.5 py-1 rounded-full border border-[#bf61ff]/20">
+                  <span className="text-[#3B82F6] font-bold text-sm tracking-wider bg-[#3B82F6]/10 px-2.5 py-1 rounded-full border border-[#3B82F6]/20 font-heading">
                     {skill.level}%
                   </span>
                 </div>
@@ -83,7 +114,7 @@ const Tech = () => {
                     initial={{ width: 0 }}
                     animate={{ width: `${skill.level}%` }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
-                    className="h-full bg-gradient-to-r from-[#915eff] to-[#bf61ff] rounded-full"
+                    className="h-full bg-gradient-to-r from-[#3B82F6] to-[#60A5FA] rounded-full"
                   />
                 </div>
               </motion.div>

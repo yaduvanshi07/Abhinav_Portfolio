@@ -34,12 +34,12 @@ const App = () => {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 z-[100] bg-[#050816] flex flex-col justify-center items-center">
+      <div className="fixed inset-0 z-[100] bg-[#09090B] flex flex-col justify-center items-center">
         {/* Sleek spinning gradient ring */}
         <div className="relative w-20 h-20 mb-6 flex items-center justify-center">
           <div className="absolute inset-0 border-[3px] border-white/5 rounded-full" />
-          <div className="absolute inset-0 border-[3px] border-t-[#915eff] border-r-transparent border-b-[#bf61ff] border-l-transparent rounded-full animate-spin" />
-          <span className="text-[#915eff] font-bold text-lg">AKY</span>
+          <div className="absolute inset-0 border-[3px] border-t-[#3B82F6] border-r-transparent border-b-[#60A5FA] border-l-transparent rounded-full animate-spin" />
+          <span className="text-[#3B82F6] font-bold text-lg">AKY</span>
         </div>
         <h2 className="text-white text-xl font-black tracking-[0.25em] animate-pulse">
           ABHINAV KUMAR YADAV
@@ -53,26 +53,33 @@ const App = () => {
 
   return (
     <ErrorBoundary>
-      <div className="relative z-0 bg-primary">
+      <div className="relative z-0 bg-[#09090B]">
         <div>
           <Navbar />
           <Hero />
         </div>
         <AboutSection />
+        <div className="section-divider" />
         <TechSection />
+        <div className="section-divider" />
         <Suspense fallback={null}>
           <WorksSection />
         </Suspense>
+        <div className="section-divider" />
         <Suspense fallback={null}>
           <ProjectsSection />
         </Suspense>
+        <div className="section-divider" />
         <Education />
+        <div className="section-divider" />
         <Suspense fallback={null}>
           <Achievements />
         </Suspense>
+        <div className="section-divider" />
         <Suspense fallback={null}>
           <Certifications />
         </Suspense>
+        <div className="section-divider" />
         <ContactSection />
         <StarsCanvas />
         <Footer />

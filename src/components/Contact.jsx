@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { staggerContainer, fadeIn, slideIn } from '../utils/motion'
 import { textVariant } from '../utils/motion'
+import { FaEnvelope, FaPhoneAlt, FaLink, FaCheckCircle, FaTimesCircle } from 'react-icons/fa'
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -82,10 +83,10 @@ const Contact = () => {
         {/* Form panel */}
         <motion.div
           variants={slideIn('left', 'tween', 0.2, 0.8)}
-          className="md:w-[60%] md:flex-none bg-[#100d25]/60 border border-white/5 p-8 rounded-2xl backdrop-blur-md relative"
+          className="md:w-[60%] md:flex-none bg-[#18181B]/60 border border-white/5 p-8 rounded-2xl backdrop-blur-md relative"
         >
           <p className="text-secondary text-sm uppercase tracking-wider">Reach out directly</p>
-          <h3 className="text-white font-black text-[30px] sm:text-[40px] md:text-[50px] tracking-wide mt-1">
+          <h3 className="text-white font-black text-[30px] sm:text-[40px] md:text-[50px] tracking-wide mt-1 font-heading">
             Send Message.
           </h3>
 
@@ -102,7 +103,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What's your name?"
-                className="bg-[#151030]/80 border border-white/10 py-4 px-6 placeholder:text-secondary text-white rounded-xl outline-none focus:border-[#915eff]/50 transition-colors font-light"
+                className="bg-[#18181B]/80 border border-white/10 py-4 px-6 placeholder:text-secondary text-white rounded-xl outline-none focus:border-[#3B82F6]/50 transition-colors font-light"
               />
             </label>
             <label className="flex flex-col">
@@ -114,7 +115,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="What's your email address?"
-                className="bg-[#151030]/80 border border-white/10 py-4 px-6 placeholder:text-secondary text-white rounded-xl outline-none focus:border-[#915eff]/50 transition-colors font-light"
+                className="bg-[#18181B]/80 border border-white/10 py-4 px-6 placeholder:text-secondary text-white rounded-xl outline-none focus:border-[#3B82F6]/50 transition-colors font-light"
               />
             </label>
             <label className="flex flex-col">
@@ -126,14 +127,14 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Write your message details..."
-                className="bg-[#151030]/80 border border-white/10 py-4 px-6 placeholder:text-secondary text-white rounded-xl outline-none focus:border-[#915eff]/50 transition-colors font-light resize-none"
+                className="bg-[#18181B]/80 border border-white/10 py-4 px-6 placeholder:text-secondary text-white rounded-xl outline-none focus:border-[#3B82F6]/50 transition-colors font-light resize-none"
               />
             </label>
 
             <button
               type="submit"
               disabled={loading}
-              className="bg-gradient-to-r from-[#915eff] to-[#bf61ff] hover:from-[#7c4ce6] hover:to-[#a84ee6] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-lg shadow-primary transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-[#3B82F6] hover:bg-[#60A5FA] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-lg shadow-black transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Sending...' : 'Send Message'}
             </button>
@@ -144,9 +145,9 @@ const Contact = () => {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="absolute bottom-6 right-8 bg-[#00cea8] text-primary px-4 py-2.5 rounded-xl font-bold text-sm shadow-md z-[60]"
+              className="absolute bottom-6 right-8 bg-[#22C55E] text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-md z-[60] flex items-center gap-2"
             >
-              ✓ Thank you! I will respond shortly.
+              <FaCheckCircle /> Thank you! I will respond shortly.
             </motion.div>
           )}
 
@@ -154,9 +155,9 @@ const Contact = () => {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="absolute bottom-6 right-8 bg-[#ff4a4a] text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-md z-[60]"
+              className="absolute bottom-6 right-8 bg-[#EF4444] text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-md z-[60] flex items-center gap-2"
             >
-              ✗ {error}
+              <FaTimesCircle /> {error}
             </motion.div>
           )}
         </motion.div>
@@ -166,33 +167,33 @@ const Contact = () => {
           variants={slideIn('right', 'tween', 0.2, 0.8)}
           className="md:w-[40%] md:flex-none flex flex-col justify-center gap-6"
         >
-          <div className="bg-[#151030]/40 border border-white/5 p-6 rounded-2xl flex items-center gap-4 hover:border-[#915eff]/30 transition-colors duration-300">
-            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-[#00cea8]">
-              ✉️
+          <div className="bg-[#18181B]/40 border border-white/5 p-6 rounded-2xl flex items-center gap-4 hover:border-[#3B82F6]/30 hover:bg-[#18181B]/60 transition-all duration-300 group">
+            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-white group-hover:scale-110 transition-transform duration-300">
+              <FaEnvelope />
             </div>
             <div>
               <p className="text-secondary text-xs font-semibold uppercase tracking-wider">Email Address</p>
-              <a href="mailto:abhinavyaduvanshi05@gmail.com" className="text-white hover:text-[#915eff] font-medium transition-colors text-[15px] mt-0.5 block">
+              <a href="mailto:abhinavyaduvanshi05@gmail.com" className="text-white hover:text-[#3B82F6] font-medium transition-colors text-[15px] mt-0.5 block">
                 abhinavyaduvanshi05@gmail.com
               </a>
             </div>
           </div>
 
-          <div className="bg-[#151030]/40 border border-white/5 p-6 rounded-2xl flex items-center gap-4 hover:border-[#915eff]/30 transition-colors duration-300">
-            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-[#bf61ff]">
-              📞
+          <div className="bg-[#18181B]/40 border border-white/5 p-6 rounded-2xl flex items-center gap-4 hover:border-[#3B82F6]/30 hover:bg-[#18181B]/60 transition-all duration-300 group">
+            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-white group-hover:scale-110 transition-transform duration-300">
+              <FaPhoneAlt />
             </div>
             <div>
               <p className="text-secondary text-xs font-semibold uppercase tracking-wider">Phone Number</p>
-              <a href="tel:9336158912" className="text-white hover:text-[#915eff] font-medium transition-colors text-[15px] mt-0.5 block">
+              <a href="tel:9336158912" className="text-white hover:text-[#3B82F6] font-medium transition-colors text-[15px] mt-0.5 block">
                 +91 9336158912
               </a>
             </div>
           </div>
 
-          <div className="bg-[#151030]/40 border border-white/5 p-6 rounded-2xl flex items-center gap-4 hover:border-[#915eff]/30 transition-colors duration-300">
-            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-[#915eff]">
-              🔗
+          <div className="bg-[#18181B]/40 border border-white/5 p-6 rounded-2xl flex items-center gap-4 hover:border-[#3B82F6]/30 hover:bg-[#18181B]/60 transition-all duration-300 group">
+            <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-white group-hover:scale-110 transition-transform duration-300">
+              <FaLink />
             </div>
             <div>
               <p className="text-secondary text-xs font-semibold uppercase tracking-wider">Professional Networks</p>
@@ -201,7 +202,7 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/abhinav-kumar-yadav-706a14257"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-[#915eff] font-medium transition-colors text-sm"
+                  className="text-white hover:text-[#3B82F6] font-medium transition-colors text-sm"
                 >
                   LinkedIn Profile
                 </a>
@@ -210,7 +211,7 @@ const Contact = () => {
                   href="https://github.com/yaduvanshi07"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-[#915eff] font-medium transition-colors text-sm"
+                  className="text-white hover:text-[#3B82F6] font-medium transition-colors text-sm"
                 >
                   GitHub Repos
                 </a>
