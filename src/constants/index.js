@@ -336,7 +336,7 @@ const projects = [
     ],
     image: veni_vidi_disceres,
     source_code_link: "https://github.com/yaduvanshi07",
-    live_link: "",
+    live_link: "https://veni-vidi-disceres.onrender.com/documents/69ecb9756b6ad38099eafb18",
     category: "AI / ML"
   },
   {
