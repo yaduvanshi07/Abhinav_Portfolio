@@ -30,7 +30,7 @@ const ProjectCard = ({
           scale: 1.02,
           speed: 300,
         }}
-        className="bg-[#18181B]/60 backdrop-blur-md p-6 rounded-2xl sm:w-[380px] w-full border border-white/5 flex flex-col justify-between h-full hover:border-[#3B82F6]/30 transition-all duration-300 shadow-card"
+        className="bg-[#18181B]/60 backdrop-blur-md p-6 rounded-2xl w-full border border-white/5 flex flex-col justify-between h-full hover:border-[#3B82F6]/30 transition-all duration-300 shadow-card"
       >
         <div>
           {image && (
@@ -153,7 +153,7 @@ const Projects = () => {
 
       <motion.div
         layout
-        className="mt-12 flex flex-wrap gap-8 justify-center md:justify-start"
+        className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center"
       >
         <AnimatePresence>
           {filteredProjects.map((project, index) => (

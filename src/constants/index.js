@@ -5,6 +5,8 @@ import {
   web,
   wanderlust_loop,
   veni_vidi_disceres,
+  smart_customer_banner,
+  loanify_banner,
 } from "../assets";
 
 export const navLinks = [
@@ -334,6 +336,72 @@ const projects = [
     ],
     image: veni_vidi_disceres,
     source_code_link: "https://github.com/yaduvanshi07",
+    live_link: "",
+    category: "AI / ML"
+  },
+  {
+    name: "SmartCustomer",
+    description:
+      "An unsupervised machine learning system designed to segment retail customers based on demographic features and transactional/spending patterns using advanced clustering models.",
+    achievements: [
+      "Engineered complex demographic features (customer age, tenure, total child count) to enhance clustering relevance.",
+      "Implemented PCA to reduce feature dimensionality for noise reduction and 3D visualization.",
+      "Utilized K-Means and Agglomerative Clustering algorithms to extract clean, actionable customer personas.",
+      "Optimized the cluster count selection dynamically using the Elbow Method and Knee Point detection."
+    ],
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Scikit-Learn",
+        color: "green-text-gradient",
+      },
+      {
+        name: "K-Means / PCA",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Unsupervised ML",
+        color: "orange-text-gradient",
+      }
+    ],
+    image: smart_customer_banner,
+    source_code_link: "https://github.com/yaduvanshi07/SmartCustomer-",
+    live_link: "",
+    category: "AI / ML"
+  },
+  {
+    name: "Loanify",
+    description:
+      "An end-to-end supervised machine learning pipeline that predicts loan approval outcomes by evaluating applicant financial health and credit risk indicators.",
+    achievements: [
+      "Built and simulated a predictive classification framework utilizing applicant demographic and credit risk metrics.",
+      "Conducted comparative model evaluation using Logistic Regression, K-Nearest Neighbors, and Gaussian Naive Bayes.",
+      "Engineered comprehensive data preprocessing pipelines featuring categorical encoding, imputation, and feature scaling.",
+      "Performed deep Exploratory Data Analysis (EDA) to map key factors influencing credit decisions (credit score, DTI ratio)."
+    ],
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Scikit-Learn",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Supervised ML",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Classification / EDA",
+        color: "orange-text-gradient",
+      }
+    ],
+    image: loanify_banner,
+    source_code_link: "https://github.com/yaduvanshi07/Loanify-Loan-Approval-System",
     live_link: "",
     category: "AI / ML"
   },
