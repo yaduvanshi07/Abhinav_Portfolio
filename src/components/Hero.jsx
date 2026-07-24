@@ -76,7 +76,7 @@ const Hero = () => {
             {/* CTAs and Resume Button */}
             <div className="flex flex-wrap gap-4 pt-2">
               <a
-                href="https://drive.google.com/file/d/1l-0d64IU9MXXonUHYGVHhXbzFkHDKbmH/view?usp=sharing"
+                href="https://drive.google.com/file/d/1cPl_Sra45UG6jjgoJYybXSKIsWBxs0xj/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-[#3B82F6]/80 to-[#60A5FA]/80 hover:from-[#3B82F6] hover:to-[#60A5FA] text-white px-6 py-3 rounded-full font-semibold shadow-[0_4px_15px_rgba(59,130,246,0.25)] transition-all duration-300 hover:scale-105 flex items-center gap-2 cursor-pointer z-20 group border border-[#3B82F6]/20"
