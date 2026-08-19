@@ -19,64 +19,65 @@ const EducationCard = ({ index, accentColor, degree, institution, date, grade, g
   return (
     <motion.div
       variants={fadeIn('up', 'spring', index * 0.2, 0.75)}
-      className="relative bg-[#18181B]/50 border border-white/5 p-8 rounded-2xl backdrop-blur-md shadow-card w-full max-w-4xl mx-auto flex flex-col md:flex-row gap-6 items-start justify-between border-l-4 hover:border-white/10 transition-all duration-500"
+      className="relative bg-[#18181B]/60 border border-white/5 p-6 sm:p-8 rounded-2xl backdrop-blur-md shadow-card w-full max-w-4xl mx-auto flex flex-col md:flex-row gap-6 items-start justify-between border-l-4 hover:border-white/10 hover:shadow-card-blue transition-all duration-300 group"
       style={{
         borderLeftColor: accentColor,
-        boxShadow: `0 20px 60px -10px rgba(0,0,0,0.6), 0 0 30px ${accentColor}10`
       }}
     >
       {/* Icon badge */}
-      <div className="absolute -top-4 -left-3 w-10 h-10 rounded-full bg-[#18181B] border border-white/10 flex items-center justify-center shadow-lg">
+      <div className="absolute -top-4 left-4 md:-left-4 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#18181B] border border-white/10 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
         {getEducationIcon(type)}
       </div>
 
-      <div className="space-y-4 flex-1">
+      <div className="space-y-4 flex-1 pt-2 md:pt-0">
         <div>
-          <div className="flex items-center gap-3 flex-wrap">
+          <div className="flex items-center gap-2.5 flex-wrap">
             <span 
-              className="text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full border"
+              className="text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full border font-heading"
               style={{
-                backgroundColor: `${accentColor}10`,
+                backgroundColor: `${accentColor}15`,
                 color: accentColor,
-                borderColor: `${accentColor}20`
+                borderColor: `${accentColor}30`
               }}
             >
               {date}
             </span>
             {isCollege && (
               <span 
-                className="text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full border"
+                className="text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full border font-heading"
                 style={{
-                  backgroundColor: `${accentColor}10`,
+                  backgroundColor: `${accentColor}15`,
                   color: accentColor,
-                  borderColor: `${accentColor}20`
+                  borderColor: `${accentColor}30`
                 }}
               >
                 B.Tech CSE
               </span>
             )}
           </div>
-          <h3 className="text-white text-[22px] font-bold mt-3 tracking-wide leading-tight font-heading">{degree}</h3>
+          <h3 className="text-white text-[20px] sm:text-[22px] font-bold mt-3 tracking-wide leading-snug font-heading group-hover:text-[#60A5FA] transition-colors">
+            {degree}
+          </h3>
           <p 
-            className="text-[17px] font-semibold mt-1 flex items-center gap-2"
+            className="text-[15px] sm:text-[16px] font-semibold mt-1 flex items-center gap-2"
             style={{ color: accentColor }}
           >
             <FaMapMarkerAlt className="w-3.5 h-3.5 flex-shrink-0" />
             {institution}
           </p>
         </div>
-        <p className="text-secondary text-[15px] leading-relaxed font-light">{details}</p>
+        <p className="text-secondary text-[14px] sm:text-[15px] leading-relaxed font-light">{details}</p>
 
         {/* Subject highlights for 10th class */}
         {highlights && highlights.length > 0 && (
-          <div className="flex flex-wrap gap-3 pt-1">
+          <div className="flex flex-wrap gap-2.5 pt-1">
             {highlights.map((h, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-xl"
+                className="flex items-center gap-2 bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-xl text-xs"
               >
-                <span className="text-sm font-bold" style={{ color: accentColor }}>{h.score}</span>
-                <span className="text-secondary text-xs font-medium">in {h.subject}</span>
+                <span className="font-bold" style={{ color: accentColor }}>{h.score}</span>
+                <span className="text-secondary font-medium">in {h.subject}</span>
               </div>
             ))}
           </div>
@@ -84,12 +85,12 @@ const EducationCard = ({ index, accentColor, degree, institution, date, grade, g
       </div>
 
       {/* Grade badge */}
-      <div className="flex-shrink-0 bg-white/5 border border-white/10 px-6 py-4 rounded-2xl text-center md:self-center min-w-[130px] hover:bg-white/[0.07] transition-colors duration-300">
-        <span className="text-secondary text-[10px] font-semibold uppercase tracking-wider block">
+      <div className="flex-shrink-0 bg-white/5 border border-white/10 px-5 py-3 sm:px-6 sm:py-4 rounded-2xl text-center self-start md:self-center min-w-[120px] sm:min-w-[130px] hover:bg-white/[0.08] transition-colors duration-300">
+        <span className="text-secondary text-[10px] font-semibold uppercase tracking-wider block font-heading">
           {gradeLabel || 'Grade'}
         </span>
         <span 
-          className="text-2xl font-black tracking-wide block mt-1"
+          className="text-xl sm:text-2xl font-black tracking-wide block mt-1 font-heading"
           style={{ color: accentColor }}
         >
           {grade}

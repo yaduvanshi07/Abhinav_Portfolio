@@ -34,6 +34,24 @@ code {
 }
 
 /* ========================================
+   Performance & GPU Optimization
+   ======================================== */
+.shadow-card {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+img {
+  content-visibility: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ========================================
    Custom Scrollbar
    ======================================== */
 ::-webkit-scrollbar {

@@ -24,24 +24,26 @@ const AchievementCard = ({ index, title, description }) => {
   return (
     <Tilt
       options={{
-        max: 20,
+        max: 15,
         scale: 1.03,
         speed: 350,
       }}
-      className="w-full sm:w-[280px] md:w-[320px]"
+      className="w-full h-full"
     >
       <motion.div
-        variants={fadeIn('up', 'spring', index * 0.15, 0.75)}
-        className="w-full bg-gradient-to-br from-white/5 to-white/0 p-[1px] rounded-2xl border border-white/5 shadow-card hover:border-[#3B82F6]/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 h-full"
+        variants={fadeIn('up', 'spring', index * 0.12, 0.6)}
+        className="w-full bg-[#18181B]/60 backdrop-blur-md p-6 rounded-2xl border border-white/5 shadow-card hover:border-[#3B82F6]/40 hover:shadow-card-blue transition-all duration-300 h-full flex flex-col items-center text-center space-y-4 group"
       >
-        <div className="bg-[#18181B]/60 backdrop-blur-md p-6 rounded-2xl flex flex-col items-center text-center h-full space-y-4">
-          <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.2)]">
-            {getAchievementIcon(title)}
-          </div>
-          <div className="space-y-2">
-            <h3 className="text-white text-[18px] font-bold tracking-wide font-heading">{title}</h3>
-            <p className="text-secondary text-[13px] leading-relaxed font-light">{description}</p>
-          </div>
+        <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shadow-inner group-hover:scale-110 group-hover:border-[#3B82F6]/40 group-hover:bg-[#3B82F6]/10 transition-all duration-300">
+          {getAchievementIcon(title)}
+        </div>
+        <div className="space-y-2 flex-1 flex flex-col justify-center">
+          <h3 className="text-white text-[17px] sm:text-[18px] font-bold tracking-wide font-heading group-hover:text-[#60A5FA] transition-colors">
+            {title}
+          </h3>
+          <p className="text-secondary text-[13px] sm:text-[14px] leading-relaxed font-light">
+            {description}
+          </p>
         </div>
       </motion.div>
     </Tilt>
@@ -54,7 +56,7 @@ const Achievements = () => {
       variants={staggerContainer()}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.15 }}
       className="w-full space-y-12"
     >
       <motion.div variants={textVariant()}>
@@ -62,7 +64,7 @@ const Achievements = () => {
         <h2 className={styles.sectionHeadText}>Achievements.</h2>
       </motion.div>
 
-      <div className="flex flex-wrap gap-6 justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
         {achievements.map((item, index) => (
           <AchievementCard key={`achievement-${index}`} index={index} {...item} />
         ))}

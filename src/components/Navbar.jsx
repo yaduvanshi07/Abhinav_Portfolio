@@ -48,7 +48,7 @@ const Navbar = () => {
             </p>
           </div>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-1 items-center border border-saffron/20 rounded-full px-2 py-1.5 bg-white/[0.02] backdrop-blur-md">
+        <ul className="list-none hidden lg:flex flex-row gap-1 items-center border border-saffron/20 rounded-full px-2 py-1.5 bg-white/[0.02] backdrop-blur-md">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -61,7 +61,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -71,7 +71,7 @@ const Navbar = () => {
 
           <div
             className={`${!toggle ? 'hidden' : 'flex'
-              } p-6 bg-[#18181B]/95 backdrop-blur-md border border-[#27272A] absolute top-20 right-0 mx-4 my-2 min-w-[160px] z-10 rounded-xl shadow-2xl`}
+              } p-6 bg-[#18181B]/95 backdrop-blur-md border border-[#27272A] absolute top-20 right-0 mx-4 my-2 min-w-[180px] z-10 rounded-xl shadow-2xl`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (

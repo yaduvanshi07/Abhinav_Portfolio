@@ -27,8 +27,8 @@ const ServiceCard = ({ index, title, link }) => {
       variants={fadeIn('right', 'spring', index * 0.3, 0.75)}
       className={`w-full bg-gradient-to-br from-[#3B82F6]/30 to-[#60A5FA]/5 p-[1px] rounded-[20px] shadow-card hover:shadow-[0_0_25px_rgba(59,130,246,0.25)] transition-shadow duration-300 ${link ? 'cursor-pointer' : ''}`}
     >
-      <div className="bg-[#18181B]/80 backdrop-blur-md rounded-[20px] py-8 px-6 min-h-[280px] flex justify-evenly items-center flex-col border border-white/5">
-        <div className="flex items-center justify-center bg-white/5 p-4 rounded-full border border-white/10 shadow-inner">
+      <div className="bg-[#18181B]/80 backdrop-blur-md rounded-[20px] py-8 px-6 min-h-[280px] flex justify-evenly items-center flex-col border border-white/5 group">
+        <div className="flex items-center justify-center bg-white/5 p-4 rounded-full border border-white/10 shadow-inner group-hover:scale-110 transition-transform duration-300">
           {getServiceIcon(title)}
         </div>
 
@@ -37,8 +37,8 @@ const ServiceCard = ({ index, title, link }) => {
         </h3>
 
         {link && (
-          <span className="text-[12px] font-semibold text-[#3B82F6] mt-4 flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity duration-200">
-            View Certificate
+          <span className="text-[12px] font-semibold text-[#60A5FA] mt-4 flex items-center gap-1.5 opacity-80 group-hover:opacity-100 transition-opacity duration-200">
+            View Credential
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
@@ -58,7 +58,13 @@ const ServiceCard = ({ index, title, link }) => {
       }}
     >
       {link ? (
-        <a href={link} target="_blank" rel="noopener noreferrer" className="block w-full">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View certificate for ${title}`}
+          className="block w-full"
+        >
           {cardContent}
         </a>
       ) : (
@@ -98,7 +104,7 @@ const About = () => {
 
           <div className="bg-[#18181B]/50 border border-white/5 p-6 rounded-2xl backdrop-blur-sm">
             <h4 className="text-white font-bold text-[18px] mb-2 font-heading">My Career Goals</h4>
-            <p className="text-secondary text-[15px] leading-26px]">
+            <p className="text-secondary text-[15px] leading-[26px]">
               My objective is to build highly scalable web infrastructures and AI-driven products that deliver seamless user interactions. I am eager to join high-impact engineering teams at leading companies or fast-growing startups, where I can apply my optimization skills to reduce system latency and solve complex backend challenges.
             </p>
           </div>

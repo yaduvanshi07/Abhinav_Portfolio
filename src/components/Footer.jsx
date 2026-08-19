@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-scroll'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -15,13 +15,13 @@ const Footer = () => {
         </div>
 
         {/* Right Side Social Links */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3.5">
           <a
             href="https://github.com/yaduvanshi07"
             target="_blank"
             rel="noopener noreferrer"
             className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#3B82F6] text-secondary hover:text-white transition-all flex items-center justify-center border border-white/10"
-            aria-label="GitHub"
+            aria-label="GitHub Profile"
           >
             <FaGithub className="w-4 h-4" />
           </a>
@@ -30,9 +30,23 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#3B82F6] text-secondary hover:text-white transition-all flex items-center justify-center border border-white/10"
-            aria-label="LinkedIn"
+            aria-label="LinkedIn Profile"
           >
             <FaLinkedinIn className="w-4 h-4" />
+          </a>
+          <a
+            href="mailto:abhinavyaduvanshi05@gmail.com"
+            className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#3B82F6] text-secondary hover:text-white transition-all flex items-center justify-center border border-white/10"
+            aria-label="Email Abhinav"
+          >
+            <FaEnvelope className="w-3.5 h-3.5" />
+          </a>
+          <a
+            href="tel:9336158912"
+            className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#3B82F6] text-secondary hover:text-white transition-all flex items-center justify-center border border-white/10"
+            aria-label="Call Abhinav"
+          >
+            <FaPhoneAlt className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>

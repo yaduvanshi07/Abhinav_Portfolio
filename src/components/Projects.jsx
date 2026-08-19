@@ -15,6 +15,7 @@ const ProjectCard = ({
   image,
   source_code_link,
   live_link,
+  category,
 }) => {
   return (
     <motion.div
@@ -23,38 +24,53 @@ const ProjectCard = ({
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.4 }}
+      className="h-full flex"
     >
       <Tilt
         options={{
-          max: 15,
+          max: 12,
           scale: 1.02,
           speed: 300,
         }}
-        className="bg-[#18181B]/60 backdrop-blur-md p-6 rounded-2xl w-full border border-white/5 flex flex-col justify-between h-full hover:border-[#3B82F6]/30 transition-all duration-300 shadow-card"
+        className="bg-[#18181B]/60 backdrop-blur-md p-6 rounded-2xl w-full border border-white/5 flex flex-col justify-between h-full hover:border-[#3B82F6]/40 transition-all duration-300 shadow-card hover:shadow-card-blue group"
       >
-        <div>
+        <div className="flex flex-col flex-1">
           {image && (
             <div className="relative w-full h-[210px] mb-5 overflow-hidden rounded-xl border border-white/10 group">
               <img
                 src={image}
                 alt={name}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
               />
+              {category && (
+                <div className="absolute top-3 right-3 z-10 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-[#09090B]/80 backdrop-blur-md text-[#60A5FA] border border-white/15 shadow-md">
+                  {category}
+                </div>
+              )}
             </div>
           )}
 
-          <div className="space-y-3">
-            <h3 className="text-white font-bold text-[24px] tracking-wide font-heading">{name}</h3>
-            <p className="text-secondary text-[14px] leading-relaxed font-light">{description}</p>
+          <div className="space-y-3 flex-1">
+            <h3 className="text-white font-bold text-[22px] sm:text-[24px] tracking-wide font-heading group-hover:text-[#60A5FA] transition-colors duration-300">
+              {name}
+            </h3>
+            <p className="text-secondary text-[14px] leading-relaxed font-light">
+              {description}
+            </p>
 
-            {/* Achievements Bullet List */}
+            {/* Key Impact & Deliverables Bullet List */}
             {achievements && achievements.length > 0 && (
-              <div className="mt-4 space-y-2">
-                <p className="text-white text-xs font-semibold uppercase tracking-wider font-heading">Key Impact & Deliverables:</p>
-                <ul className="list-disc pl-5 space-y-1">
+              <div className="mt-4 pt-3 border-t border-white/5 space-y-2.5">
+                <p className="text-white text-xs font-semibold uppercase tracking-wider font-heading flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]" />
+                  Key Impact & Deliverables:
+                </p>
+                <ul className="space-y-2 pl-0.5">
                   {achievements.map((ach, idx) => (
-                    <li key={idx} className="text-secondary text-[13px] leading-relaxed font-light">
-                      {ach}
+                    <li key={idx} className="text-secondary text-[13px] leading-relaxed font-light flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]/60 mt-1.5 flex-shrink-0" />
+                      <span>{ach}</span>
                     </li>
                   ))}
                 </ul>
@@ -63,9 +79,9 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div>
+        <div className="pt-5 border-t border-white/5 mt-5">
           {/* Tech Tags */}
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-5">
             {tags.map((tag) => (
               <span
                 key={`${name}-${tag.name}`}
@@ -77,33 +93,41 @@ const ProjectCard = ({
           </div>
 
           {/* Action Buttons */}
-          <div className="mt-6 flex items-center justify-between">
-            {source_code_link && (
-              <button
-                onClick={() => window.open(source_code_link, '_blank')}
-                className="flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 cursor-pointer"
+          <div className="flex items-center justify-between gap-3">
+            {source_code_link ? (
+              <a
+                href={source_code_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${name} source code on GitHub`}
+                className="flex items-center gap-2 bg-white/5 hover:bg-white/10 hover:border-[#3B82F6]/40 text-white border border-white/10 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 cursor-pointer"
               >
                 <FaGithub className="w-4 h-4 text-white" />
-                Codebase
-              </button>
+                <span>Codebase</span>
+              </a>
+            ) : (
+              <span className="text-xs text-secondary font-light">Internal</span>
             )}
+
             {live_link ? (
               <a
                 href={live_link}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Open live demo for ${name}`}
                 className="flex items-center gap-2 bg-[#3B82F6] hover:bg-[#60A5FA] px-4 py-2 rounded-lg text-white text-sm font-medium transition-all duration-300 shadow-[0_2px_10px_rgba(59,130,246,0.25)] hover:scale-105"
               >
                 <FaExternalLinkAlt className="w-3 h-3 text-white" />
-                Live Demo
+                <span>Live Demo</span>
               </a>
             ) : (
-              <button
-                disabled
-                className="bg-white/5 text-white/30 border border-white/5 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed"
+              <div
+                className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-xs font-medium text-secondary"
+                title="Supervised/Unsupervised machine learning experimentation pipeline"
               >
-                Internal Deploy
-              </button>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E]" />
+                <span>ML Pipeline</span>
+              </div>
             )}
           </div>
         </div>
@@ -121,29 +145,29 @@ const Projects = () => {
 
   return (
     <div className="w-full space-y-12">
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My work & contributions</p>
-        <h2 className={styles.sectionHeadText}>Featured Projects.</h2>
-      </motion.div>
+      <div className="w-full flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubText}>My work & contributions</p>
+          <h2 className={styles.sectionHeadText}>Featured Projects.</h2>
+        </motion.div>
 
-      <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-        <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
-          className="text-secondary text-[17px] max-w-3xl leading-[30px] font-light"
+        {/* Filter buttons in heading row right side */}
+        <div
+          role="tablist"
+          aria-label="Project categories"
+          className="flex gap-1.5 sm:gap-2 bg-[#18181B]/60 p-1.5 rounded-full border border-white/10 backdrop-blur-xl shadow-lg flex-shrink-0 self-start sm:self-end"
         >
-          Each project represents an end-to-end production loop or experiment. Click on links to view Git repos or explore active server-deployed applications. Key backend optimizations and algorithmic results are highlighted for review.
-        </motion.p>
-
-        {/* Filter buttons */}
-        <div className="flex gap-2.5 bg-[#18181B]/40 p-1.5 rounded-full border border-white/5 backdrop-blur-md flex-shrink-0">
           {['All', 'Full Stack', 'AI / ML'].map((cat) => (
             <button
               key={cat}
+              role="tab"
+              aria-selected={filter === cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${filter === cat
-                  ? 'bg-[#3B82F6] text-white shadow-[0_0_10px_rgba(59,130,246,0.25)]'
-                  : 'text-secondary hover:text-white'
-                }`}
+              className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer font-heading ${
+                filter === cat
+                  ? 'bg-[#3B82F6] text-white shadow-[0_0_12px_rgba(59,130,246,0.35)]'
+                  : 'text-secondary hover:text-white hover:bg-white/5'
+              }`}
             >
               {cat}
             </button>
@@ -151,13 +175,20 @@ const Projects = () => {
         </div>
       </div>
 
+      <motion.p
+        variants={fadeIn('', '', 0.1, 1)}
+        className="text-secondary text-[16px] sm:text-[17px] max-w-3xl leading-[28px] sm:leading-[30px] font-light"
+      >
+        Each project represents an end-to-end production loop or experiment. Click on links to view Git repos or explore active server-deployed applications. Key backend optimizations and algorithmic results are highlighted for review.
+      </motion.p>
+
       <motion.div
         layout
-        className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center"
+        className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-stretch"
       >
-        <AnimatePresence>
+        <AnimatePresence mode="popLayout">
           {filteredProjects.map((project, index) => (
-            <ProjectCard key={`project-${index}`} index={index} {...project} />
+            <ProjectCard key={`project-${project.name}`} index={index} {...project} />
           ))}
         </AnimatePresence>
       </motion.div>

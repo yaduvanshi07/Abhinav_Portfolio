@@ -14,7 +14,7 @@ This portfolio is designed to deliver a premium, immersive user experience lever
 *   **Immersive 3D Space Background**: Features an interactive 3D starfield canvas (`StarsCanvas`) built using Three.js and React Three Fiber.
 *   **Dynamic Typewriter & Hero Section**: Highlights key roles with interactive hover states, dynamic glow animations, and integrated intro video playback capability.
 *   **Professional Story & Timeline**: Showcases professional experiences at **Zenix Automotive** and research work at **IIT BHU** using an interactive, styled vertical timeline.
-*   **Interactive Skills Dashboard**: Categorizes languages, frontend, backend, tools, and computer science concepts using skill cards with tilt animations and level progress bars.
+*   **Interactive Skills Dashboard**: Categorizes languages, frontend, backend, tools, and computer science concepts using interactive skill cards with category filtering.
 *   **Interactive Projects Carousel**: Displays key projects like *Wanderlust Loop* (Full Stack travel portal with ML recommendation) and *Veni Vidi Disceres* (AI-powered PDF parser/OCR) with smooth glassmorphism containers.
 *   **Credentials & Certifications Hub**: Hosts verified certifications with descriptive details and downloadable PDF links.
 *   **Contact System**: Features a functional glassmorphic contact form connected to telemetry/email APIs.
@@ -55,12 +55,10 @@ npm install
 ```
 
 ### **3. Environment Setup**
-Create a `.env` file in the root directory and configure necessary API keys or links (e.g. for the Contact page or third party configurations):
+Create a `.env` file in the root directory and configure the required Web3Forms access key for the contact form:
 ```env
-# Example Env Setup
-VITE_APP_EMAILJS_SERVICE_ID=your_service_id
-VITE_APP_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_APP_EMAILJS_PUBLIC_KEY=your_public_key
+# Web3Forms API Key (Obtain from https://web3forms.com)
+VITE_WEB3FORMS_KEY=your_web3forms_access_key_here
 ```
 
 ### **4. Local Development Server**
@@ -85,4 +83,6 @@ npm run preview
 ## 📬 Contact & Networks
 
 *   **Email**: [abhinavyaduvanshi05@gmail.com](mailto:abhinavyaduvanshi05@gmail.com)
-*  
+*   **LinkedIn**: [Abhinav Kumar Yadav](https://www.linkedin.com/in/abhinav-kumar-yadav-706a14257)
+*   **GitHub**: [@yaduvanshi07](https://github.com/yaduvanshi07)
+*   **Phone**: [+91 9336158912](tel:9336158912)
