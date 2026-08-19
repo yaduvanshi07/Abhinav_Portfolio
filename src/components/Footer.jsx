@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
+import { SiLeetcode } from 'react-icons/si'
 
 const Footer = () => {
   return (
@@ -33,6 +34,15 @@ const Footer = () => {
             aria-label="LinkedIn Profile"
           >
             <FaLinkedinIn className="w-4 h-4" />
+          </a>
+          <a
+            href="https://leetcode.com/u/yaduvanshi07/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#FFA116]/20 hover:border-[#FFA116]/50 text-secondary hover:text-[#FFA116] transition-all flex items-center justify-center border border-white/10"
+            aria-label="LeetCode Profile"
+          >
+            <SiLeetcode className="w-4 h-4" />
           </a>
           <a
             href="mailto:abhinavyaduvanshi05@gmail.com"

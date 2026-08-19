@@ -3,18 +3,19 @@ import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import About from './components/About'
 import Tech from './components/Tech'
-import Contact from './components/Contact'
-import Education from './components/Education'
-import Footer from './components/Footer'
 import StarsCanvas from './components/canvas/StarsCanvas'
 import SectionWrapper from './hoc/SectionWrapper'
 import ErrorBoundary from './components/ErrorBoundary'
 import './index.css'
 
+// Lazy-load all below-the-fold sections to keep initial bundle lean
 const Works = lazy(() => import('./components/Works'))
 const Projects = lazy(() => import('./components/Projects'))
+const Education = lazy(() => import('./components/Education'))
 const Achievements = lazy(() => import('./components/Achievements'))
 const Certifications = lazy(() => import('./components/Certifications'))
+const Contact = lazy(() => import('./components/Contact'))
+const Footer = lazy(() => import('./components/Footer'))
 
 const AboutSection = SectionWrapper(About, 'about')
 const TechSection = SectionWrapper(Tech, 'skills')
@@ -22,13 +23,21 @@ const WorksSection = SectionWrapper(Works, 'work')
 const ProjectsSection = SectionWrapper(Projects, 'projects')
 const ContactSection = SectionWrapper(Contact, 'contact')
 
+// Lightweight section skeleton shown while lazy chunks load
+const SectionFallback = () => (
+  <div className="w-full py-20 flex justify-center items-center">
+    <div className="w-6 h-6 border-2 border-[#3B82F6] border-t-transparent rounded-full animate-spin opacity-50" />
+  </div>
+)
+
 const App = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    // Reduced from 1500ms → 1000ms for faster first contentful paint
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 1500)
+    }, 1000)
     return () => clearTimeout(timer)
   }, [])
 
@@ -62,30 +71,37 @@ const App = () => {
         <div className="section-divider" />
         <TechSection />
         <div className="section-divider" />
-        <Suspense fallback={null}>
+        <Suspense fallback={<SectionFallback />}>
           <WorksSection />
         </Suspense>
         <div className="section-divider" />
-        <Suspense fallback={null}>
+        <Suspense fallback={<SectionFallback />}>
           <ProjectsSection />
         </Suspense>
         <div className="section-divider" />
-        <Education />
+        <Suspense fallback={<SectionFallback />}>
+          <Education />
+        </Suspense>
         <div className="section-divider" />
-        <Suspense fallback={null}>
+        <Suspense fallback={<SectionFallback />}>
           <Achievements />
         </Suspense>
         <div className="section-divider" />
-        <Suspense fallback={null}>
+        <Suspense fallback={<SectionFallback />}>
           <Certifications />
         </Suspense>
         <div className="section-divider" />
-        <ContactSection />
+        <Suspense fallback={<SectionFallback />}>
+          <ContactSection />
+        </Suspense>
         <StarsCanvas />
-        <Footer />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </div>
     </ErrorBoundary>
   )
 }
 
 export default App
+

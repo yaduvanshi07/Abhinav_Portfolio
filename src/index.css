@@ -45,9 +45,33 @@ img {
   content-visibility: auto;
 }
 
+/* GPU-hinted interactive elements */
+a, button {
+  will-change: transform;
+}
+
+/* ========================================
+   Keyboard Accessibility Focus Rings
+   ======================================== */
+:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Remove default focus ring for mouse/touch users only */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

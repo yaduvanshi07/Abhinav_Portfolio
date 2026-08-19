@@ -4,6 +4,7 @@ import { Link } from 'react-scroll'
 import { styles } from '../styles'
 import { textVariant } from '../utils/motion'
 import { FaGithub, FaLinkedinIn, FaPhoneAlt, FaEnvelope, FaExternalLinkAlt } from 'react-icons/fa'
+import { SiLeetcode } from 'react-icons/si'
 
 const Typewriter = ({ words }) => {
   const [index, setIndex] = useState(0)
@@ -73,23 +74,33 @@ const Hero = () => {
               Building scalable web applications, intelligent recommendation systems, and AI-powered products using MERN Stack, Node.js, MongoDB, and Machine Learning.
             </p>
 
-            {/* CTAs and Resume Button */}
+            {/* CTAs, Resume & LeetCode Buttons */}
             <div className="flex flex-wrap gap-4 pt-2">
               <a
                 href="https://drive.google.com/file/d/1cPl_Sra45UG6jjgoJYybXSKIsWBxs0xj/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-r from-[#3B82F6]/80 to-[#60A5FA]/80 hover:from-[#3B82F6] hover:to-[#60A5FA] text-white px-6 py-3 rounded-full font-semibold shadow-[0_4px_15px_rgba(59,130,246,0.25)] transition-all duration-300 hover:scale-105 flex items-center gap-2 cursor-pointer z-20 group border border-[#3B82F6]/20"
+                className="bg-gradient-to-r from-[#3B82F6]/80 to-[#60A5FA]/80 hover:from-[#3B82F6] hover:to-[#60A5FA] text-white px-6 py-3 rounded-full font-semibold shadow-[0_4px_15px_rgba(59,130,246,0.25)] transition-all duration-300 hover:scale-105 flex items-center gap-2 cursor-pointer z-20 group border border-[#3B82F6]/20 font-heading"
               >
                 <FaExternalLinkAlt className="w-4 h-4 text-white group-hover:rotate-12 transition-transform duration-300" />
                 Resume
+              </a>
+              <a
+                href="https://leetcode.com/u/yaduvanshi07/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Abhinav's LeetCode profile"
+                className="bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-[#FFA116]/50 hover:text-[#FFA116] px-6 py-3 rounded-full font-semibold transition-all duration-300 backdrop-blur-md hover:scale-105 flex items-center gap-2 cursor-pointer z-20 font-heading group"
+              >
+                <SiLeetcode className="w-4 h-4 text-[#FFA116] group-hover:scale-110 transition-transform duration-300" />
+                LeetCode
               </a>
               <Link
                 to="contact"
                 smooth
                 duration={500}
                 offset={-100}
-                className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-6 py-3 rounded-full font-semibold transition-all duration-300 backdrop-blur-md hover:scale-105 flex items-center gap-2 cursor-pointer z-20 hover:border-[#3B82F6]/30"
+                className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-6 py-3 rounded-full font-semibold transition-all duration-300 backdrop-blur-md hover:scale-105 flex items-center gap-2 cursor-pointer z-20 hover:border-[#3B82F6]/30 font-heading"
               >
                 Let's Talk
               </Link>
