@@ -166,7 +166,7 @@ const ProofOfKnowledge = () => {
 
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="text-secondary text-[16px] sm:text-[17px] leading-[28px] max-w-4xl font-light"
+          className="text-white text-[16px] sm:text-[17px] leading-[28px] max-w-4xl font-light"
         >
           Proof that I have learned by building, debugging, experimenting, and understanding the fundamentals behind what I create. Every project represents hands-on problem solving, from writing and structuring the code to troubleshooting issues and understanding why a solution works. AI tools like Cursor and Antigravity are part of my development workflow and help me move faster, explore ideas, and improve productivity, but they do not replace the understanding behind the code. I take responsibility for the technical decisions, architecture, implementation, debugging, and the final result.
         </motion.p>

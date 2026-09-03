@@ -94,17 +94,17 @@ const About = () => {
           variants={fadeIn('right', 'tween', 0.2, 1)}
           className="flex-[1.2] space-y-6"
         >
-          <p className="text-secondary text-[17px] leading-[30px] font-light">
+          <p className="text-[#EDE8DC] text-[17px] leading-[30px] font-light">
             I am a results-driven Full Stack Developer and Software Engineer with academic backing from <strong className="text-white font-semibold">IIIT Manipur (CGPA 8.25)</strong> and professional internship credits at <strong className="text-white font-semibold">Zenix Automotive</strong> and <strong className="text-white font-semibold">IIT BHU</strong>. I specialize in the MERN stack, Node.js ecosystem, and integrating intelligent decision-making logic using Machine Learning concepts (like Thompson Sampling and UCB bandit models).
           </p>
 
-          <p className="text-secondary text-[17px] leading-[30px] font-light">
+          <p className="text-[#EDE8DC] text-[17px] leading-[30px] font-light">
             Having solved <strong className="text-white font-semibold">400+ problems in Data Structures and Algorithms</strong> in C++, I bring strong problem-solving skills to backend engineering, API performance tuning, and database modeling. My work blends high-performance backend pipelines with clean, responsive user experiences.
           </p>
 
           <div className="bg-[#18181B]/50 border border-white/5 p-6 rounded-2xl backdrop-blur-sm">
             <h4 className="text-white font-bold text-[18px] mb-2 font-heading">My Career Goals</h4>
-            <p className="text-secondary text-[15px] leading-[26px]">
+            <p className="text-[#EDE8DC] text-[15px] leading-[26px]">
               My objective is to build highly scalable web infrastructures and AI-driven products that deliver seamless user interactions. I am eager to join high-impact engineering teams at leading companies or fast-growing startups, where I can apply my optimization skills to reduce system latency and solve complex backend challenges.
             </p>
           </div>

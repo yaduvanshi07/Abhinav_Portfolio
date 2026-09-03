@@ -105,7 +105,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What's your name?"
-                className="bg-[#18181B]/80 border border-white/10 py-3.5 sm:py-4 px-5 sm:px-6 placeholder:text-secondary text-white rounded-xl outline-none focus:border-[#3B82F6]/70 transition-colors font-light text-sm"
+                className="bg-[#18181B]/80 border border-white/10 py-3.5 sm:py-4 px-5 sm:px-6 placeholder:text-secondary/45 text-white rounded-xl outline-none focus:border-[#3B82F6]/70 transition-colors font-light text-sm"
               />
             </label>
             <label className="flex flex-col">
@@ -119,7 +119,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="What's your email address?"
-                className="bg-[#18181B]/80 border border-white/10 py-3.5 sm:py-4 px-5 sm:px-6 placeholder:text-secondary text-white rounded-xl outline-none focus:border-[#3B82F6]/70 transition-colors font-light text-sm"
+                className="bg-[#18181B]/80 border border-white/10 py-3.5 sm:py-4 px-5 sm:px-6 placeholder:text-secondary/45 text-white rounded-xl outline-none focus:border-[#3B82F6]/70 transition-colors font-light text-sm"
               />
             </label>
             <label className="flex flex-col">
@@ -132,7 +132,7 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Write your message details..."
-                className="bg-[#18181B]/80 border border-white/10 py-3.5 sm:py-4 px-5 sm:px-6 placeholder:text-secondary text-white rounded-xl outline-none focus:border-[#3B82F6]/70 transition-colors font-light resize-none text-sm"
+                className="bg-[#18181B]/80 border border-white/10 py-3.5 sm:py-4 px-5 sm:px-6 placeholder:text-secondary/45 text-white rounded-xl outline-none focus:border-[#3B82F6]/70 transition-colors font-light resize-none text-sm"
               />
             </label>
 

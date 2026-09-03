@@ -59,7 +59,7 @@ const Hero = () => {
 
           <div className="flex-1 space-y-4 sm:space-y-6 mt-2 sm:mt-6">
             <div>
-              <p className="text-secondary text-xs sm:text-sm uppercase tracking-[0.25em] font-medium mb-2">
+              <p className="text-[#EDE8DC] text-xs sm:text-sm uppercase tracking-[0.25em] font-medium mb-2">
                 Bengaluru, India
               </p>
               <h1 className="font-black text-white text-[36px] sm:text-[50px] md:text-[58px] lg:text-[68px] leading-tight font-heading">

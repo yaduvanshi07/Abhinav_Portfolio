@@ -13,7 +13,8 @@ export default {
       },
       colors: {
         primary: "#09090B",
-        secondary: "#94A3B8",
+        secondary: "#EDE8DC", // Dark cream color (more like white, looks elegant on black background)
+        cream: "#EDE8DC",
         tertiary: "#18181B",
         "black-100": "#111827",
         "black-200": "#09090B",

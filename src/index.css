@@ -24,6 +24,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Warm Dark Cream typography for high contrast & elegance on black background */
+.text-secondary {
+  color: #EDE8DC !important;
+}
+
 canvas {
   touch-action: none;
 }
