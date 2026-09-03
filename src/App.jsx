@@ -1,6 +1,7 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import ProofOfKnowledge from './components/ProofOfKnowledge'
 import About from './components/About'
 import Tech from './components/Tech'
 import StarsCanvas from './components/canvas/StarsCanvas'
@@ -67,6 +68,8 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
+        <ProofOfKnowledge />
+        <div className="section-divider" />
         <AboutSection />
         <div className="section-divider" />
         <TechSection />
