@@ -2,11 +2,41 @@
 
 Welcome to the official repository of my personal 3D developer portfolio. This application is an interactive, highly optimized, and responsive web application showcasing my software engineering projects, work experiences, technical capabilities, and academic background.
 
-[![CI](https://github.com/yaduvanshi07/Abhinav_Portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/yaduvanshi07/Abhinav_Portfolio/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite)](https://vitejs.dev/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.3-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+<p align="center">
+  <b>Full Stack Engineer & ML Integrator</b><br>
+  <i>Scalable Backend Architectures • Interactive 3D Web Systems • Production ML Pipelines</i>
+</p>
+
+<p align="center">
+  <a href="https://abhi-portfolio2003.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Live_Portfolio-09090B?style=for-the-badge&logo=vercel&logoColor=60A5FA&labelColor=000000" alt="Live Portfolio" />
+  </a>
+  <a href="https://drive.google.com/file/d/1-eMNejiX-9HUXCNsPddpGYrcGpzKjB7G/view?usp=sharing" target="_blank">
+    <img src="https://img.shields.io/badge/Resume-3B82F6?style=for-the-badge&logo=google-drive&logoColor=white&labelColor=1D4ED8" alt="Resume" />
+  </a>
+  <a href="https://github.com/yaduvanshi07" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-18181B?style=for-the-badge&logo=github&logoColor=white&labelColor=09090B" alt="GitHub" />
+  </a>
+  <a href="https://www.linkedin.com/in/abhinav-kumar-yadav-706a14257/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=004182" alt="LinkedIn" />
+  </a>
+  <a href="https://wanderlust-loop.onrender.com/listings" target="_blank">
+    <img src="https://img.shields.io/badge/Featured_App-10B981?style=for-the-badge&logo=render&logoColor=white&labelColor=047857" alt="Featured App" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/yaduvanshi07/Abhinav_Portfolio/actions/workflows/ci.yml"><img src="https://github.com/yaduvanshi07/Abhinav_Portfolio/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" /></a>
+  <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=black" alt="React" /></a>
+  <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite" alt="Vite" /></a>
+  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind-3.3-38B2AC?logo=tailwind-css" alt="TailwindCSS" /></a>
+</p>
+
+> ### Quick Navigation Hub
+> | <img src="https://cdn.simpleicons.org/vercel/60A5FA" width="16" height="16" align="center" /> **Live Portfolio** | <img src="https://cdn.simpleicons.org/googledrive/3B82F6" width="16" height="16" align="center" /> **Resume (CV)** | <img src="https://cdn.simpleicons.org/github/white" width="16" height="16" align="center" /> **GitHub Profile** | <img src="https://cdn.simpleicons.org/linkedin/0A66C2" width="16" height="16" align="center" /> **LinkedIn Profile** | <img src="https://cdn.simpleicons.org/render/10B981" width="16" height="16" align="center" /> **Flagship Project** |
+> | :---: | :---: | :---: | :---: | :---: |
+> | [**abhi-portfolio2003.vercel.app**](https://abhi-portfolio2003.vercel.app/) | [**Download / View PDF**](https://drive.google.com/file/d/1-eMNejiX-9HUXCNsPddpGYrcGpzKjB7G/view?usp=sharing) | [**@yaduvanshi07**](https://github.com/yaduvanshi07) | [**Abhinav Kumar Yadav**](https://www.linkedin.com/in/abhinav-kumar-yadav-706a14257/) | [**Wanderlust Loop (Render)**](https://wanderlust-loop.onrender.com/listings) |
 
 ---
 
@@ -89,4 +119,4 @@ npm run preview
 * **LinkedIn**: [Abhinav Kumar Yadav](https://www.linkedin.com/in/abhinav-kumar-yadav-706a14257)
 * **GitHub**: [@yaduvanshi07](https://github.com/yaduvanshi07)
 * **Phone**: [+91 9336158912](tel:9336158912)
-* **Resume**: [Google Drive View](https://drive.google.com/file/d/1cPl_Sra45UG6jjgoJYybXSKIsWBxs0xj/view?usp=sharing)
+* **Resume**: [Google Drive View](https://drive.google.com/file/d/1-eMNejiX-9HUXCNsPddpGYrcGpzKjB7G/view?usp=sharing)
