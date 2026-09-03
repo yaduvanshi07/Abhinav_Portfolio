@@ -173,11 +173,7 @@ const ProofOfKnowledge = () => {
       </div>
 
       {/* 3D Horizontal Document Carousel Container */}
-      <div
-        className="relative w-full mt-10 sm:mt-14 flex flex-col items-center select-none"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
+      <div className="relative w-full mt-10 sm:mt-14 flex flex-col items-center select-none">
         {/* Carousel Viewport with 3D perspective */}
         <div
           className="relative w-full flex items-center justify-center overflow-hidden py-4"
@@ -246,6 +242,8 @@ const ProofOfKnowledge = () => {
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={0.25}
                 onDragEnd={handleDragEnd}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
                 onClick={() => {
                   if (isPrev) handlePrev()
                   else if (isNext) handleNext()
