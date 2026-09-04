@@ -38,6 +38,7 @@ import wanderlust_loop from "./wanderlust_loop.png";
 import veni_vidi_disceres from "./veni_vidi_disceres.png";
 import smart_customer_banner from "./smart_customer_banner.png";
 import loanify_banner from "./loanify_banner.png";
+import ai_personal_assistant from "./ai_personal_assistant.png";
 
 export {
   // Icons
@@ -76,4 +77,5 @@ export {
   veni_vidi_disceres,
   smart_customer_banner,
   loanify_banner,
+  ai_personal_assistant,
 };

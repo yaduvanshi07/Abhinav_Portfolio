@@ -7,6 +7,7 @@ import {
   veni_vidi_disceres,
   smart_customer_banner,
   loanify_banner,
+  ai_personal_assistant,
 } from "../assets";
 
 export const navLinks = [
@@ -403,6 +404,39 @@ const projects = [
     image: loanify_banner,
     source_code_link: "https://github.com/yaduvanshi07/Loanify-Loan-Approval-System",
     live_link: "",
+    category: "AI / ML"
+  },
+  {
+    name: "AI Personal Assistant",
+    description:
+      "A lightweight Flask web app powered by Google's Gemini API that provides a browser interface for asking general questions and summarizing long emails into concise two-to-three sentence outputs.",
+    achievements: [
+      "Integrated Google Gemini API to power a helpful-assistant prompt and an email summarization endpoint.",
+      "Built two JSON REST endpoints — /ask and /summarize — handling form-based requests from the browser.",
+      "Deployed to Render using Gunicorn as the production WSGI server with a render.yaml Blueprint config.",
+      "Served a responsive static interface using Flask's built-in template and static file system."
+    ],
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Flask",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Gemini API",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Gunicorn",
+        color: "orange-text-gradient",
+      }
+    ],
+    image: ai_personal_assistant,
+    source_code_link: "https://github.com/yaduvanshi07/AI-Personal-Assistant",
+    live_link: "https://ai-personal-assistant-1-xnd6.onrender.com/",
     category: "AI / ML"
   },
 ];
