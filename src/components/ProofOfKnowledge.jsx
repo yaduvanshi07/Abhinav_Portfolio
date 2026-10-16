@@ -282,8 +282,8 @@ const ProofOfKnowledge = () => {
                     zIndex,
                   }}
                   transition={{
-                    duration: prefersReducedMotion ? 0.01 : 1.1,
-                    ease: [0.25, 1, 0.5, 1],
+                    duration: prefersReducedMotion ? 0.01 : 0.6,
+                    ease: [0.16, 1, 0.3, 1],
                   }}
                   drag={isActive ? 'x' : false}
                   dragConstraints={{ left: 0, right: 0 }}
@@ -296,7 +296,7 @@ const ProofOfKnowledge = () => {
                     else if (isNextCard) handleNext()
                     else if (isActive) handleOpenPdf(doc.url)
                   }}
-                  className={`absolute inset-y-0 my-auto rounded-[24px] p-[1.5px] transition-shadow duration-500 cursor-pointer ${
+                  className={`absolute inset-y-0 my-auto rounded-[24px] p-[1.5px] cursor-pointer ${
                     isActive
                       ? 'bg-gradient-to-b from-[#3B82F6]/60 via-[#60A5FA]/25 to-[#3B82F6]/40 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.9),0_0_35px_rgba(59,130,246,0.25)]'
                       : 'bg-white/10 hover:bg-white/20'
@@ -306,6 +306,9 @@ const ProofOfKnowledge = () => {
                     height: `${cardHeight}px`,
                     transformStyle: 'preserve-3d',
                     pointerEvents: isVisible ? 'auto' : 'none',
+                    willChange: 'transform, opacity',
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
                   }}
                   whileHover={
                     isActive && !prefersReducedMotion
@@ -333,13 +336,13 @@ const ProofOfKnowledge = () => {
                     )}
 
                     {/* PDF Badge */}
-                    <div className="absolute top-2.5 left-2.5 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/65 backdrop-blur-md border border-white/15">
+                    <div className="absolute top-2.5 left-2.5 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/70 border border-white/15">
                       <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
                       <span className="text-[10px] font-mono font-bold text-red-400 uppercase tracking-wider">PDF</span>
                     </div>
 
                     {/* Counter Badge */}
-                    <div className="absolute top-2.5 right-2.5 z-20 px-2.5 py-1 rounded-full bg-black/65 backdrop-blur-md border border-white/15 text-[10px] font-mono text-white/80">
+                    <div className="absolute top-2.5 right-2.5 z-20 px-2.5 py-1 rounded-full bg-black/70 border border-white/15 text-[10px] font-mono text-white/80">
                       {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
                     </div>
 
@@ -348,7 +351,7 @@ const ProofOfKnowledge = () => {
                       <button
                         type="button"
                         onClick={(e) => handleOpenPdf(doc.url, e)}
-                        className="absolute bottom-2.5 right-2.5 z-20 py-1.5 px-3.5 rounded-full bg-[#18181B]/85 hover:bg-[#3B82F6] text-white backdrop-blur-md border border-white/20 hover:border-[#3B82F6] font-heading font-semibold text-[11px] tracking-wider uppercase flex items-center gap-1.5 shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all cursor-pointer group/btn"
+                        className="absolute bottom-2.5 right-2.5 z-20 py-1.5 px-3.5 rounded-full bg-[#18181B] hover:bg-[#3B82F6] text-white border border-white/20 hover:border-[#3B82F6] font-heading font-semibold text-[11px] tracking-wider uppercase flex items-center gap-1.5 shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-colors cursor-pointer group/btn"
                         aria-label={`Open original PDF for ${doc.title} in new tab`}
                       >
                         <span>View PDF</span>
@@ -356,9 +359,9 @@ const ProofOfKnowledge = () => {
                       </button>
                     )}
 
-                    {/* Dimming overlay */}
+                    {/* Dimming overlay — no backdrop-blur (GPU cost) */}
                     {!isActive && (
-                      <div className="absolute inset-0 bg-black/45 backdrop-blur-[0.5px] z-25 transition-opacity duration-300 hover:bg-black/20 rounded-[22.5px]" aria-hidden="true" />
+                      <div className="absolute inset-0 bg-black/50 z-25 rounded-[22.5px]" aria-hidden="true" />
                     )}
                   </div>
                 </motion.div>
@@ -466,8 +469,8 @@ const ProofOfKnowledge = () => {
                     zIndex,
                   }}
                   transition={{
-                    duration: prefersReducedMotion ? 0.01 : 1.1,
-                    ease: [0.25, 1, 0.5, 1],
+                    duration: prefersReducedMotion ? 0.01 : 0.6,
+                    ease: [0.16, 1, 0.3, 1],
                   }}
                   drag={isActive ? 'x' : false}
                   dragConstraints={{ left: 0, right: 0 }}
@@ -477,7 +480,7 @@ const ProofOfKnowledge = () => {
                     if (isPrevCard) handlePrevProject()
                     else if (isNextCard) handleNextProject()
                   }}
-                  className={`absolute inset-y-0 my-auto rounded-[24px] p-[1.5px] transition-shadow duration-500 cursor-pointer ${
+                  className={`absolute inset-y-0 my-auto rounded-[24px] p-[1.5px] cursor-pointer ${
                     isActive
                       ? 'bg-gradient-to-b from-[#3B82F6]/60 via-[#60A5FA]/25 to-[#3B82F6]/40 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.9),0_0_35px_rgba(59,130,246,0.25)]'
                       : 'bg-white/10 hover:bg-white/20'
@@ -487,6 +490,9 @@ const ProofOfKnowledge = () => {
                     height: `${cardHeight}px`,
                     transformStyle: 'preserve-3d',
                     pointerEvents: isVisible ? 'auto' : 'none',
+                    willChange: 'transform, opacity',
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
                   }}
                   whileHover={
                     isActive && !prefersReducedMotion
@@ -505,7 +511,8 @@ const ProofOfKnowledge = () => {
                         src={proj.image}
                         alt={proj.name}
                         className="w-full h-full object-cover rounded-[20px] select-none pointer-events-none"
-                        loading="lazy"
+                        loading="eager"
+                        decoding="async"
                       />
                     ) : (
                       <div className="flex flex-col items-center justify-center text-center p-4">
@@ -513,16 +520,16 @@ const ProofOfKnowledge = () => {
                       </div>
                     )}
 
-                    {/* Category badge (top-left, mirrors PDF badge position) */}
+                    {/* Category badge (top-left) — no backdrop-blur */}
                     {proj.category && (
-                      <div className="absolute top-2.5 left-2.5 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/65 backdrop-blur-md border border-white/15">
+                      <div className="absolute top-2.5 left-2.5 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/70 border border-white/15">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]" />
                         <span className="text-[10px] font-mono font-bold text-[#60A5FA] uppercase tracking-wider">{proj.category}</span>
                       </div>
                     )}
 
-                    {/* Counter badge (top-right, same as left) */}
-                    <div className="absolute top-2.5 right-2.5 z-20 px-2.5 py-1 rounded-full bg-black/65 backdrop-blur-md border border-white/15 text-[10px] font-mono text-white/80">
+                    {/* Counter badge (top-right) — no backdrop-blur */}
+                    <div className="absolute top-2.5 right-2.5 z-20 px-2.5 py-1 rounded-full bg-black/70 border border-white/15 text-[10px] font-mono text-white/80">
                       {String(index + 1).padStart(2, '0')} / {String(totalProjects).padStart(2, '0')}
                     </div>
 
@@ -536,7 +543,7 @@ const ProofOfKnowledge = () => {
                             rel="noopener noreferrer"
                             aria-label={`View ${proj.name} on GitHub`}
                             onClick={(e) => e.stopPropagation()}
-                            className="py-1.5 px-3 rounded-full bg-[#18181B]/85 hover:bg-white/10 text-white backdrop-blur-md border border-white/20 font-heading font-semibold text-[11px] tracking-wider uppercase flex items-center gap-1.5 shadow-[0_4px_20px_rgba(0,0,0,0.6)] transition-all cursor-pointer group/btn"
+                            className="py-1.5 px-3 rounded-full bg-[#18181B] hover:bg-white/10 text-white border border-white/20 font-heading font-semibold text-[11px] tracking-wider uppercase flex items-center gap-1.5 shadow-[0_4px_20px_rgba(0,0,0,0.6)] transition-colors cursor-pointer group/btn"
                           >
                             <FaGithub className="w-2.5 h-2.5" />
                             <span>Code</span>
@@ -549,7 +556,7 @@ const ProofOfKnowledge = () => {
                             rel="noopener noreferrer"
                             aria-label={`Open live demo for ${proj.name}`}
                             onClick={(e) => e.stopPropagation()}
-                            className="py-1.5 px-3.5 rounded-full bg-[#18181B]/85 hover:bg-[#3B82F6] text-white backdrop-blur-md border border-white/20 hover:border-[#3B82F6] font-heading font-semibold text-[11px] tracking-wider uppercase flex items-center gap-1.5 shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all cursor-pointer group/btn"
+                            className="py-1.5 px-3.5 rounded-full bg-[#18181B] hover:bg-[#3B82F6] text-white border border-white/20 hover:border-[#3B82F6] font-heading font-semibold text-[11px] tracking-wider uppercase flex items-center gap-1.5 shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-colors cursor-pointer group/btn"
                           >
                             <span>{proj.secondary_live_link ? 'Landing' : 'Live Demo'}</span>
                             <FaExternalLinkAlt className="w-2.5 h-2.5 text-[#60A5FA] group-hover/btn:text-white transition-colors" />
@@ -562,7 +569,7 @@ const ProofOfKnowledge = () => {
                             rel="noopener noreferrer"
                             aria-label={`Open live app for ${proj.name}`}
                             onClick={(e) => e.stopPropagation()}
-                            className="py-1.5 px-3.5 rounded-full bg-[#3B82F6] hover:bg-[#60A5FA] text-white backdrop-blur-md border border-[#3B82F6] font-heading font-semibold text-[11px] tracking-wider uppercase flex items-center gap-1.5 shadow-[0_4px_20px_rgba(59,130,246,0.4)] transition-all cursor-pointer"
+                            className="py-1.5 px-3.5 rounded-full bg-[#3B82F6] hover:bg-[#60A5FA] text-white border border-[#3B82F6] font-heading font-semibold text-[11px] tracking-wider uppercase flex items-center gap-1.5 shadow-[0_4px_20px_rgba(59,130,246,0.4)] transition-colors cursor-pointer"
                           >
                             <span>Live App</span>
                             <FaExternalLinkAlt className="w-2.5 h-2.5" />
@@ -571,9 +578,9 @@ const ProofOfKnowledge = () => {
                       </div>
                     )}
 
-                    {/* Dimming overlay on side cards */}
+                    {/* Dimming overlay on side cards — no backdrop-blur (GPU cost) */}
                     {!isActive && (
-                      <div className="absolute inset-0 bg-black/45 backdrop-blur-[0.5px] z-25 transition-opacity duration-300 hover:bg-black/20 rounded-[22.5px]" aria-hidden="true" />
+                      <div className="absolute inset-0 bg-black/50 z-25 rounded-[22.5px]" aria-hidden="true" />
                     )}
                   </div>
                 </motion.div>
