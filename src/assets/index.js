@@ -39,6 +39,7 @@ import veni_vidi_disceres from "./veni_vidi_disceres.png";
 import smart_customer_banner from "./smart_customer_banner.png";
 import loanify_banner from "./loanify_banner.png";
 import ai_personal_assistant from "./ai_personal_assistant.png";
+import presentiq from "./presentiq.png";
 
 export {
   // Icons
@@ -78,4 +79,5 @@ export {
   smart_customer_banner,
   loanify_banner,
   ai_personal_assistant,
+  presentiq,
 };

@@ -14,6 +14,7 @@ const ProjectCard = ({
   image,
   source_code_link,
   live_link,
+  secondary_live_link,
   category,
   isActive,
 }) => {
@@ -99,7 +100,7 @@ const ProjectCard = ({
           </div>
 
           {/* Action Buttons */}
-          <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center justify-between gap-2">
             {source_code_link ? (
               <a
                 href={source_code_link}
@@ -107,36 +108,58 @@ const ProjectCard = ({
                 rel="noopener noreferrer"
                 aria-label={`View ${name} source code on GitHub`}
                 onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-2 bg-white/5 hover:bg-white/10 hover:border-[#3B82F6]/40 text-white border border-white/10 px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer"
+                className="flex items-center gap-1.5 sm:gap-2 bg-white/5 hover:bg-white/10 hover:border-[#3B82F6]/40 text-white border border-white/10 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer flex-shrink-0"
               >
-                <FaGithub className="w-4 h-4 text-white" />
+                <FaGithub className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                 <span>Codebase</span>
               </a>
             ) : (
               <span className="text-xs text-secondary font-light">Internal</span>
             )}
 
-            {live_link ? (
-              <a
-                href={live_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Open live demo for ${name}`}
-                onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-2 bg-[#3B82F6] hover:bg-[#60A5FA] px-4 py-2 rounded-lg text-white text-xs sm:text-sm font-medium transition-all duration-300 shadow-[0_2px_10px_rgba(59,130,246,0.25)] hover:scale-105"
-              >
-                <FaExternalLinkAlt className="w-3 h-3 text-white" />
-                <span>Live Demo</span>
-              </a>
-            ) : (
-              <div
-                className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-xs font-medium text-secondary"
-                title="Supervised/Unsupervised machine learning experimentation pipeline"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E]" />
-                <span>ML Pipeline</span>
-              </div>
-            )}
+            <div className="flex items-center gap-2">
+              {live_link && (
+                <a
+                  href={live_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open ${secondary_live_link ? 'landing page' : 'live demo'} for ${name}`}
+                  onClick={(e) => e.stopPropagation()}
+                  className={`flex items-center gap-1.5 ${
+                    secondary_live_link
+                      ? 'bg-white/5 hover:bg-white/10 border border-white/10 text-white hover:border-[#3B82F6]/40'
+                      : 'bg-[#3B82F6] hover:bg-[#60A5FA] text-white shadow-[0_2px_10px_rgba(59,130,246,0.25)]'
+                  } px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105`}
+                >
+                  <FaExternalLinkAlt className="w-3 h-3" />
+                  <span>{secondary_live_link ? 'Landing' : 'Live Demo'}</span>
+                </a>
+              )}
+
+              {secondary_live_link && (
+                <a
+                  href={secondary_live_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open live web app for ${name}`}
+                  onClick={(e) => e.stopPropagation()}
+                  className="flex items-center gap-1.5 bg-[#3B82F6] hover:bg-[#60A5FA] px-3 sm:px-4 py-2 rounded-lg text-white text-xs sm:text-sm font-medium transition-all duration-300 shadow-[0_2px_10px_rgba(59,130,246,0.25)] hover:scale-105"
+                >
+                  <FaExternalLinkAlt className="w-3 h-3 text-white" />
+                  <span>Live App</span>
+                </a>
+              )}
+
+              {!live_link && !secondary_live_link && (
+                <div
+                  className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-xs font-medium text-secondary"
+                  title="Supervised/Unsupervised machine learning experimentation pipeline"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E]" />
+                  <span>ML Pipeline</span>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </Tilt>

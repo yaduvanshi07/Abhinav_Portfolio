@@ -47,7 +47,7 @@ Welcome to the official repository of my personal 3D developer portfolio. This a
 * **Professional Story & Metrics**: Highlights key milestones (CGPA 8.25 at IIIT Manipur, 400+ DSA problems solved in C++, Best Intern Award, -35% API latency optimization).
 * **Work Experience & Research**: Detailed interactive timeline showcasing full-stack engineering at **Zenix Automotive** and ML research work at **IIT BHU**.
 * **Technical Skills Grid**: Modern, high-density capability matrix categorized by domain (*Languages, Frontend, Backend & DB, AI/ML Concepts, Tools & Clouds, Computer Science Core*) with keyboard-accessible WAI-ARIA tab semantics.
-* **Featured Projects Hub**: Showcases production applications like *Wanderlust Loop* (Full-stack travel platform with ML recommendations), *Veni Vidi Disceres* (AI PDF/OCR Parser), *Smart Customer* (MERN Portal), and *Loanify* (Financial Platform).
+* **Featured Projects Hub**: Showcases production applications like *PresentIQ* (AI Biometric Attendance System with Face & Voice Recognition), *Wanderlust Loop* (Full-stack travel platform with ML recommendations), *Veni Vidi Disceres* (AI PDF/OCR Parser), *Smart Customer* (MERN Portal), and *Loanify* (Financial Platform).
 * **Verified Credentials**: Dedicated hub for verified industry certifications with direct PDF links.
 * **Functional Contact Form**: Direct message delivery powered by Web3Forms integration with real-time submit loader and toast feedback.
 

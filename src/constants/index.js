@@ -8,6 +8,7 @@ import {
   smart_customer_banner,
   loanify_banner,
   ai_personal_assistant,
+  presentiq,
 } from "../assets";
 
 export const navLinks = [
@@ -266,6 +267,44 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "PresentIQ",
+    description:
+      "A full-stack multimodal biometric attendance platform automating classroom check-ins via Face Recognition (dlib + SVM) and Sequential Voice Recognition (Resemblyzer), backed by Supabase PostgreSQL.",
+    achievements: [
+      "Engineered dual AI biometrics: 128-d facial embeddings (dlib HOG + ResNet + SVC) & speaker voiceprints (Resemblyzer GE2E + Librosa audio segmentation).",
+      "Designed passwordless student authentication with instant webcam FaceID login and biometric self-registration.",
+      "Built multi-modal classroom roll-call: batch face scanning from classroom photos & real-time silence-split audio stream identification.",
+      "Integrated Supabase PostgreSQL for real-time biometric vectors, QR-code subject onboarding, and ISO 8601 attendance audit logs."
+    ],
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Streamlit",
+        color: "green-text-gradient",
+      },
+      {
+        name: "dlib / Vision AI",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Voice AI / Resemblyzer",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Supabase",
+        color: "blue-text-gradient",
+      }
+    ],
+    image: presentiq,
+    source_code_link: "https://github.com/yaduvanshi07/PresentIQ2",
+    live_link: "https://landing-present-iq.vercel.app/",
+    secondary_live_link: "https://presentiq2-rxuozdens46mkrxuwtfpnb.streamlit.app/",
+    category: "AI / ML"
+  },
   {
     name: "Wanderlust Loop",
     description:
