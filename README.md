@@ -11,7 +11,7 @@ Welcome to the official repository of my personal 3D developer portfolio. This a
   <a href="https://abhi-portfolio2003.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/Live_Portfolio-09090B?style=for-the-badge&logo=vercel&logoColor=60A5FA&labelColor=000000" alt="Live Portfolio" />
   </a>
-  <a href="https://drive.google.com/file/d/1-eMNejiX-9HUXCNsPddpGYrcGpzKjB7G/view?usp=sharing" target="_blank">
+  <a href="https://drive.google.com/file/d/107TqIuVDpLUoQX0eHz020p59oMaot638/view?usp=sharing" target="_blank">
     <img src="https://img.shields.io/badge/Resume-3B82F6?style=for-the-badge&logo=google-drive&logoColor=white&labelColor=1D4ED8" alt="Resume" />
   </a>
   <a href="https://github.com/yaduvanshi07" target="_blank">
@@ -36,7 +36,7 @@ Welcome to the official repository of my personal 3D developer portfolio. This a
 > ### Quick Navigation Hub
 > | <img src="https://cdn.simpleicons.org/vercel/60A5FA" width="16" height="16" align="center" /> **Live Portfolio** | <img src="https://cdn.simpleicons.org/googledrive/3B82F6" width="16" height="16" align="center" /> **Resume (CV)** | <img src="https://cdn.simpleicons.org/github/white" width="16" height="16" align="center" /> **GitHub Profile** | <img src="https://cdn.simpleicons.org/linkedin/0A66C2" width="16" height="16" align="center" /> **LinkedIn Profile** | <img src="https://cdn.simpleicons.org/render/10B981" width="16" height="16" align="center" /> **Flagship Project** |
 > | :---: | :---: | :---: | :---: | :---: |
-> | [**abhi-portfolio2003.vercel.app**](https://abhi-portfolio2003.vercel.app/) | [**Download / View PDF**](https://drive.google.com/file/d/1-eMNejiX-9HUXCNsPddpGYrcGpzKjB7G/view?usp=sharing) | [**@yaduvanshi07**](https://github.com/yaduvanshi07) | [**Abhinav Kumar Yadav**](https://www.linkedin.com/in/abhinav-kumar-yadav-706a14257/) | [**Wanderlust Loop (Render)**](https://wanderlust-loop.onrender.com/listings) |
+> | [**abhi-portfolio2003.vercel.app**](https://abhi-portfolio2003.vercel.app/) | [**Download / View PDF**](https://drive.google.com/file/d/107TqIuVDpLUoQX0eHz020p59oMaot638/view?usp=sharing) | [**@yaduvanshi07**](https://github.com/yaduvanshi07) | [**Abhinav Kumar Yadav**](https://www.linkedin.com/in/abhinav-kumar-yadav-706a14257/) | [**Wanderlust Loop (Render)**](https://wanderlust-loop.onrender.com/listings) |
 
 ---
 
@@ -119,4 +119,4 @@ npm run preview
 * **LinkedIn**: [Abhinav Kumar Yadav](https://www.linkedin.com/in/abhinav-kumar-yadav-706a14257)
 * **GitHub**: [@yaduvanshi07](https://github.com/yaduvanshi07)
 * **Phone**: [+91 9336158912](tel:9336158912)
-* **Resume**: [Google Drive View](https://drive.google.com/file/d/1-eMNejiX-9HUXCNsPddpGYrcGpzKjB7G/view?usp=sharing)
+* **Resume**: [Google Drive View](https://drive.google.com/file/d/107TqIuVDpLUoQX0eHz020p59oMaot638/view?usp=sharing)
